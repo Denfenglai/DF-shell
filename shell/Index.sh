@@ -70,5 +70,5 @@ exit
 if [[ ${等风来} = 0 ]]
 exit 0
 fi
-
+fi
      
