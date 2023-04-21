@@ -1,6 +1,6 @@
 #!/bin/bash
 if [ -d "$HOME/Yunzai-Bot" ];then
-       whiptail --title "白狐≧▽≦" --msgbox "
+       whiptail --title "涩涩！" --msgbox "
        您已安装云崽 禁止套娃
        " 10 43
      else
@@ -112,7 +112,8 @@ if [ -d "$HOME/Yunzai-Bot" ];then
            echo echo 你已安装等风来脚本！感谢使用！ > /usr/bin/dfl
            chmod 777 /usr/bin/dfl
            pushd 
-           echo
+           echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""]]
+           d
         fi
     fi
     
