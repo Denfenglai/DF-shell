@@ -104,6 +104,7 @@ if [ $feedback = 0 ];then
 
     # 检查脚本版本是否最新，如果不是则下载最新版本
     version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
+    clear
     if [ "$version" != "$ver" ]; then
         rm -rf /usr/local/bin/d
         wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
@@ -132,6 +133,7 @@ if [ $feedback = 0 ];then
         d
     else
         # 版本最新，提示用户
+        clear
         whiptail --title "等风来" --msgbox \
         "主人♡ 人家已经是最新了" \
         8 25
@@ -141,6 +143,8 @@ fi
   #退出
   if [[ ${sese} = 0 ]]
   then
+  clear
+  echo "感谢使用🙏"
   exit 0
   fi
 
