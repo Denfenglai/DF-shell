@@ -103,7 +103,7 @@ if [ $feedback = 0 ];then
     fi
 
     # 检查脚本版本是否最新，如果不是则下载最新版本
-    version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/blob/master/shell/Deng.sh)
+    version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
     if [ "$version" != "$ver" ]; then
         rm -rf /usr/local/bin/d
         wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
