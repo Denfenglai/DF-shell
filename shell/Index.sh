@@ -81,6 +81,7 @@ if [ $feedback = 0 ];then
   if [[ ${sese} = 6 ]]; then
     # 如果环境不存在，则下载等风来脚本
     if [ ! -f "/usr/local/bin/d" ]; then
+    clear
         wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1
         # 显示下载进度条
         {
