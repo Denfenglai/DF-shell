@@ -18,7 +18,7 @@ if [ $feedback = 0 ];then
   #调用管理脚本
   if [[ ${等风来} = 1 ]]
   bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Manage.sh)
-  fi
+  
   
   #调用安装脚本
   if [[ ${等风来} = 2 ]]
