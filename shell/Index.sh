@@ -63,6 +63,7 @@ if [ $feedback = 0 ];then
   fi
   
   if [[ ${sese} = 6 ]];then
+  cd
   fi
   
   #退出
