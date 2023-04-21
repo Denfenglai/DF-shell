@@ -73,5 +73,5 @@ if [[ ${等风来} = 0 ]]
 then
 exit 0
 fi
-
+fi
      
