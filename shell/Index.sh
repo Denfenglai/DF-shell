@@ -116,23 +116,24 @@ if [ $feedback = 0 ];then
         } | whiptail --gauge "有新版本辣 正在更新！" 6 60 0
         if ! [ -e "/usr/local/bin/d" ]; then
             # 下载失败，提示用户并退出
-            whiptail --title "魅魔♡" --msgbox 
-            "呜呜 被玩坏惹 肯定是网络的问题！" 
+            whiptail --title "魅魔♡" --msgbox \
+            "呜呜 被玩坏惹 肯定是网络的问题！" \ 
             8 25
             exit
         fi
         # 下载完成，随机获取一句励志名言并显示
-        Aword=$(curl -s https://api.vvhan.com/api/ian)
-        whiptail --title "更新成功" --msgbox 
+        Aword=$(curl -s https://api.vvhan.com/api/ian) \
+        whiptail --title "更新成功" --msgbox \
         "${Aword}" 
         10 50
         chmod +x /usr/local/bin/d
         rm wget.log
+        exit
         d
     else
         # 版本最新，提示用户
-        whiptail --title "等风来" --msgbox 
-        "主人♡ 人家已经是最新了" 
+        whiptail --title "等风来" --msgbox \
+        "主人♡ 人家已经是最新了" \
         8 25
     fi
 fi
