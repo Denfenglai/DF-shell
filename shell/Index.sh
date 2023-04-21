@@ -66,7 +66,6 @@ exit
 fi 
   d
 exit
-            ;;
     
     
 if [[ ${等风来} = 0 ]]
