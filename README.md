@@ -31,8 +31,6 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)<br>
 >选择下载`arm64`版 然后使用下面的命令
-<li>如果你是32位的手机请下载｀arm32｀<li>
-<li>随后自动查找Ubuntu18.04的安装教程
 ```
 bash <(curl -sL https://gitee.com/haanxuan/yzai-pd/raw/master/GG.sh)
 ```
