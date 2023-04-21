@@ -46,6 +46,7 @@ if [ $feedback = 0 ];then
   #调用附加安装脚本
   if [[ ${sese} = 4 ]]
     then
+    cd
     fi
   
   if [[ ${sese} = 5 ]]
