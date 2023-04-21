@@ -1,5 +1,13 @@
 #!/bin/bash
-ver=0.1.0
+ver=0.1.1
+# 定义颜色变量
+reset="\e[0m"
+green="\e[32m"
+red="\e[31m"
+cyan="\e[36m"
+blue="\e[34m"
+yellow="\e[33m"
+bold="\e[1m"
 
 while true
 do
@@ -21,18 +29,27 @@ if [ $feedback = 0 ];then
   #调用管理脚本
   if [[ ${sese} = 1 ]]
    then
+   clear
+   echo -e "\e[34m 校验脚本成功 \e[0m"
+   echo -e "\e[32m 获取密钥成功 \e[0m"
      bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Manage.sh)
  fi
   
   #安装脚本
   if [[ ${sese} = 2 ]]
     then
+    clear
+    echo -e "\e[34m 校验脚本成功 \e[0m"
+    echo -e "\e[32m 获取密钥成功 \e[0m"
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
   fi
   
   #调用插件脚本
   if [[ ${sese} = 3 ]]
    then
+   clear
+    echo -e "\e[34m 校验脚本成功 \e[0m"
+    echo -e "\e[32m 获取密钥成功 \e[0m"
       if [ -d "$HOME/Yunzai-Bot" ];then
        bash <(curl -sL https://gitee.com/haanxuan/yzai-pd/raw/master/plugins.sh)
      else
