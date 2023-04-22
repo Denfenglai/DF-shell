@@ -1,8 +1,8 @@
-<h1 align="center">Ubuntu-Yunzai</h1>
+<h1 align="center">Cvs-Yunzai</h1>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr/>
 <ul>
-<li>由于本人是萌新，很多东西才刚刚起步</li>
+<li>由于本人是萌新，脚本全部由CV制作而成</li>
 <li>如果你使用过程中发现报错或者问题，请麻烦您向我反馈</li>
 <li>功能完善中……</li>
 <img src="图片/星野爱.jpg" alt="爱" width = "400">
