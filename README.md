@@ -2,8 +2,8 @@
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr/>
 <ul>
-<li>星野爱16岁抱俩娃满是遗憾</li>
-<li>等风来16岁俩系统全是CV</li>
+<li>星野爱16岁抱俩娃皆遗憾</li>
+<li>等风来16岁俩端全是CVS</li>
 <li>功能完善中……</li>
 <img src="图片/星野爱.jpg" alt="爱" width = "400">
   </a><br>
