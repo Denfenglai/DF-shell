@@ -1,5 +1,5 @@
 #!/bin/bash
-ver=0.1.3
+ver=0.1.4
 # 定义颜色变量
 reset="\e[0m"
 green="\e[32m"
@@ -59,15 +59,17 @@ if [ $feedback = 0 ];then
      fi
    fi
   
-  #调用附加安装脚本
+  #调用修复脚本
   if [[ ${sese} = 4 ]]
     then
-    cd
+    clear
+    echo -e "\e[1;32m正在打开修复菜单\e[0m"
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Bc.sh)
     fi
   
   if [[ ${sese} = 5 ]]
    then
-    #作者信息？？？
+    #帮助菜单
     whiptail --title "帮助" --msgbox "
     快捷命令
     前台启动:y
@@ -75,6 +77,7 @@ if [ $feedback = 0 ];then
     重置账号:g
     查看日志:l
     停止运行:s
+    打开脚本:d
     " 17 40 7
   fi
   
