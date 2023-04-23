@@ -31,7 +31,7 @@ if [ $feedback = 0 ];then
    then
    clear
    echo -e "\e[34m 校验脚本成功 \e[0m"
-   echo -e "\e[32m 获取密钥成功 \e[0m"
+   echo -e "\e[32m 正在打开管理脚本 \e[0m"
      bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Manage.sh)
  fi
   
@@ -40,7 +40,7 @@ if [ $feedback = 0 ];then
     then
     clear
     echo -e "\e[34m 校验脚本成功 \e[0m"
-    echo -e "\e[32m 获取密钥成功 \e[0m"
+    echo -e "\e[32m 正在打开安装脚本 \e[0m"
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
   fi
   
@@ -64,8 +64,14 @@ if [ $feedback = 0 ];then
     then
     clear
     echo -e "\e[1;32m正在打开修复菜单\e[0m"
+    if [ -d "$HOME/Yunzai-Bot" ];then
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Bc.sh)
-    fi
+     else
+     whiptail --title "哦呀？" --msgbox "
+     笨比，你都没有安装云崽怎么修复啊
+       " 10 43
+      fi
+fi
   
   if [[ ${sese} = 5 ]]
    then
