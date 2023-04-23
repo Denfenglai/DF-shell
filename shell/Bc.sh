@@ -55,7 +55,7 @@ if [ "$ICQQ_VERSION" = "$REQUIRED_VERSION" ]; then
 else
     #什么?你居然不用0.0.31?给我用！
     ICQQ_VERSION=$(echo $ICQQ_VERSION | sed 's/.*[@+]//' | sed 's/\/.*//')
-    echo "\e[1;31m当前ICQQ版本为:\e[0m \e[1;34m$ICQQ_VERSION\e[0m"
+    echo -e "\e[1;31m当前ICQQ版本为:\e[0m \e[1;34m$ICQQ_VERSION\e[0m"
     sleep 0.5
     echo -e "\e[1;34m正在尝试安装ICQQ@0.0.31版本\e[0m"
     sleep 0.5
