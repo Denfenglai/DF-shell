@@ -4,13 +4,11 @@ cd ~/Yunzai-Bot
 # 清屏
 clear
 
-# 添加背景和图案
-cowsay -f dragon Welcome to the menu! | lolcat 
 
 # 添加菜单选项
-echo "============================="
-echo "           报错修复            "
-echo "============================="
+echo "================================="
+echo "              报错修复            "
+echo "================================="
 echo "1. 修复pnpm start 报错"
 echo "2. 修复缺少icqq"
 echo "3. 重装云崽依赖"
