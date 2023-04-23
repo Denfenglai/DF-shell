@@ -91,11 +91,11 @@ if [ -d "$HOME/Yunzai-Bot" ];then
            echo '正在将启动写入启动命令'
            #启动
            echo echo 正在启动Yunzai-Bot > /usr/bin/y
-           sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && node app' /usr/bin/y 
+           sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && npm stop && node app' /usr/bin/y 
            chmod 777 /usr/bin/y
            #后台
            echo echo 正在启动Yunzai-Bot > /usr/bin/r
-           sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && pnpm run start' /usr/bin/r
+           sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && npm stop && pnpm run start' /usr/bin/r
            chmod 777 /usr/bin/r
            #日志
            echo echo 打开Yunzai-Bot日志 > /usr/bin/l
