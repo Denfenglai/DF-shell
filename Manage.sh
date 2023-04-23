@@ -17,6 +17,7 @@ if [ -d "$HOME/Yunzai-Bot" ];then
            if [[ ${admin} = 1 ]];then
               pushd ~/Yunzai-Bot
               redis-server --daemonize yes
+              npm stop
               node app
            fi
            
@@ -29,6 +30,7 @@ if [ -d "$HOME/Yunzai-Bot" ];then
            if [[ ${admin} = 3 ]];then
              pushd ~/Yunzai-Bot
              redis-server --daemonize yes
+             npm stop
              pnpm run start
            fi
              
@@ -39,6 +41,7 @@ if [ -d "$HOME/Yunzai-Bot" ];then
            
            if [[ ${admin} = 5 ]];then
            pushd ~/Yunzai-Bot
+           npm stop
            rm $HOME/Yunzai-Bot/data/device.json
            pnpm run login
            fi
@@ -67,7 +70,7 @@ if [ -d "$HOME/Yunzai-Bot" ];then
                d
            fi
     else
-           whiptail --title "涩批~" --msgbox "
+           whiptail --title "笨比~" --msgbox "
            笨比，你都没有安装云崽，快去安装吧!
            " 10 43        
     fi
