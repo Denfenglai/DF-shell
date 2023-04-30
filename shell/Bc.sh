@@ -12,8 +12,7 @@ echo "================================="
 echo "1. 修复pnpm start 报错"
 echo "2. 修复缺少icqq"
 echo "3. 重装云崽依赖"
-echo "4. 修复45禁止登录（概率成功）"
-echo "5. 打开puppeteer chromium修复菜单
+echo "4. 打开puppeteer chromium修复菜单
 "
 
 # 提示用户选择
@@ -38,7 +37,7 @@ case $choice in
         pnpm install
         echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         ;;
-    4)
+    Gun)
      echo "正在校验ICQQ版本"
 #定义ICQQ版本
 ICQQ_VERSION=$(npm ls icqq | grep icqq | awk '{print $4}' | cut -c2-)
@@ -80,7 +79,7 @@ else
 fi
  npm run login
         ;;
-    5)
+    4)
 #清屏
 clear
         echo -e "\e[1;32m正在打开Chromium修复菜单\e[0m"
