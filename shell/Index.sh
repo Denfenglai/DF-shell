@@ -76,6 +76,7 @@ fi
 
   #打开错误码修复脚本
   if [[ ${sese} = 5 ]]
+  then
   if [ -d "$HOME/Yunzai-Bot" ];then
        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
      else
