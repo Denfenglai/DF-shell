@@ -1,4 +1,4 @@
-<ul>
+<div align="center">
 <img src="图片/星野爱.jpg" alt="爱" width = "400">
   </a><br>
 </ul>
