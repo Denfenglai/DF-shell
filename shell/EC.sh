@@ -9,6 +9,7 @@ L="\e[34m"
 H="\e[33m"
 #清屏
 clear
+do
 echo "           错误码  "
 echo "============================"
 echo "    1. 删除虚拟设备信息"
@@ -38,6 +39,7 @@ fi
         
         #装
     2)
+        do
         clear
         echo "=============ICQQ官网=============="
         echo "  https://github.com/icqqjs/icqq"
