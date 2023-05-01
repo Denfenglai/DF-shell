@@ -44,7 +44,7 @@ fi
         echo "  不知道版本就不要用或者去官网找你要的"
         echo "=================================="
         echo -e "请输入您要安装的icqq版本(格式：x.x):"
-        echo "ICQQ@0." && read version
+        echo -n "ICQQ@0.";read version
         if [[ "$version" == "n" ]]; then
             exit 0
         elif [[ "$version" =~ ^[0-3]\.[0-2]$ ]]; then
