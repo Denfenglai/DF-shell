@@ -1,3 +1,6 @@
+<img src="图片/星野爱.jpg" alt="爱" width = "400">
+  </a><br>
+</ul>
 <h1 align="center">Cvs-Yunzai</h1>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr/>
@@ -5,9 +8,7 @@
 <li>星野爱16岁抱俩娃皆遗憾</li>
 <li>等风来16岁俩端全是CVS</li>
 <li>功能完善中……</li>
-<img src="图片/星野爱.jpg" alt="爱" width = "400">
-  </a><br>
-</ul>
+
 <hr/>
 
 ## 一.Ubuntu系统直接安装脚本<br>
@@ -30,23 +31,8 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 ## 二、手机termux安装
 
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)<br>
->选择下载`arm64`版 然后使用下面的命令
-```
-bash <(curl -sL https://gitee.com/haanxuan/yzai-pd/raw/master/GG.sh)
-```
+>选择下载`arm64`版 然后移步 [白狐](https://gitee.com/baihu433/Ubuntu-Yunzai)
 
-如果提示`No command curl found` 则使用下面的命令安装curl <br>
-
-```
-pkg update
-```
-```
-pkg install -y curl
-```
->安装完成后执行
-```
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
-```
 <hr>
 
 #### 作者列表
