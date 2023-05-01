@@ -7,7 +7,7 @@
 <li>星野爱16岁抱俩娃皆遗憾</li>
 <li>等风来16岁俩端全是CVS</li>
 <li>功能完善中……</li>
-<img src="图片/星野爱.jpg" alt="爱" width = "400">
+<img src="图片/我爱.jpg" alt="爱" width = "400">
   </a><br>
 
 <hr/>
