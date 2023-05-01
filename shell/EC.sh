@@ -24,7 +24,7 @@ echo "      输入【icqq】换喵喵源"
 echo "============================"
 echo "    0. 退出"
 
-do
+while true; do
 read -p "请输入选项编号: " opt
 case $opt in
     #删
@@ -40,7 +40,7 @@ fi
         
         #装
     2)
-        do
+        while true; do
         clear
         echo "=============ICQQ官网=============="
         echo "  https://github.com/icqqjs/icqq"
@@ -130,6 +130,7 @@ fi
         
     *)
         echo "无效的选项"
-        done
         ;;
+
 esac
+done
