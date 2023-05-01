@@ -51,7 +51,7 @@ fi
         echo -n "ICQQ@0.";read version
         if [[ "$version" == "n" ]]; then
             exit 0
-        elif [[ "$version" =~ ^[0-3]\.[0-2]$ ]]; then
+        elif [[ "$version" =~ ^[0-3]\.[0-37]$ ]]; then
             cd ~/Yunzai-Bot
             pnpm i icqq@0.$version -w
             echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
