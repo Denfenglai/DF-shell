@@ -53,6 +53,7 @@ fi
             echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         else
             echo -e "$R输入的格式不正确，请重新输入$N"
+            done
         fi
         ;;
         
@@ -126,6 +127,6 @@ fi
         
     *)
         echo "无效的选项"
+        done
         ;;
 esac
-done
