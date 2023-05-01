@@ -36,7 +36,6 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 
 <hr>
 
-<div align="center">
 #### 作者列表
 | 作者 | QQ |QQ群|
 | --- | --- | --- |
