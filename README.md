@@ -1,6 +1,7 @@
 <div align="center">
 <img src="图片/星野爱.jpg" alt="爱" width = "400">
   </a><br>
+<hr/>
 </ul>
 <h1 align="center">Cvs-Yunzai</h1>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
