@@ -40,7 +40,6 @@ fi
         
         #装
     2)
-        while true; do
         clear
         echo "=============ICQQ官网=============="
         echo "  https://github.com/icqqjs/icqq"
@@ -56,18 +55,17 @@ fi
             echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         else
             echo -e "$R输入的格式不正确，请重新输入$N"
-            done
         fi
         ;;
         
     3)
 #套用xdm的脚本，咱也不看直接套
 clear
-echo -e "$Y本方法是安装0.3.1版本然后使用协议6$N"
-echo -e "$Q也就是安卓8.8.8$N"
-echo -e "$R此方法必须完全删除虚拟设备信息！$N"
-echo -e "$Q等风来就是不要脸，直接套人家脚本，诶嘿~$N"
-echo -e "$Y5秒后开始安装$N"
+echo -e "$Y 本方法是安装0.3.1版本然后使用协议6$N"
+echo -e "$Q 也就是安卓8.8.8 $N"
+echo -e "$R 此方法必须完全删除虚拟设备信息！$N"
+echo -e "$Q 等风来就是不要脸，直接套人家脚本，诶嘿~$N"
+echo -e "$Y 5秒后开始安装$N"
 sleep 5
 #先提前删一遍
 cd ~/Yunzai-Bot
