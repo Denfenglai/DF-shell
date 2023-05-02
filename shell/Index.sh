@@ -338,5 +338,4 @@ if [[ ${sese} = 8 ]]
   exit 0
   fi
 
-fi
 done
