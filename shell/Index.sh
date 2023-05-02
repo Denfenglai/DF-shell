@@ -321,8 +321,8 @@ if [[ ${sese} = 8 ]]
         exit
       fi
       ;;
-  esac
   fi
+  esac
   
 #退出
   if [[ ${sese} = 0 ]]
