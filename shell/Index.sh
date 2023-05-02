@@ -297,4 +297,7 @@ fi
   exit 0
   fi
 
-fi
+else
+    exit
+    fi
+    done
