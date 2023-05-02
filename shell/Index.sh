@@ -24,7 +24,8 @@ while true
 do
 sese=$(whiptail \
 --title "(⑅˃◡˂⑅)" \
---menu "${ver}" \
+--menu "${ver}
+当前路径: $Yz" \
 17 35 7 \
 "1" "管理Yunzai-Bot" \
 "2" "安装Yunzai-Bot" \
