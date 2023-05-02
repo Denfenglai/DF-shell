@@ -60,7 +60,6 @@ if [ -d "$HOME/$Yz" ];then
        3>&1 1>&2 2>&3 )
           #启动
            if [[ ${admin} = 1 ]];then
-              break
               pushd $Yz
               redis-server --daemonize yes
               npm stop
@@ -69,14 +68,12 @@ if [ -d "$HOME/$Yz" ];then
 
            #停止
            if [[ ${admin} = 2 ]];then
-              break
               pushd $Yz
               pnpm run stop
               echo -e "$G Yunzai-BOT已停止运行 $N"
            fi
 
            if [[ ${admin} = 3 ]];then
-             break
              pushd $Yz
              redis-server --daemonize yes
              npm stop
@@ -86,7 +83,6 @@ if [ -d "$HOME/$Yz" ];then
 
            #显示后台日志
            if [[ ${admin} = 4 ]];then
-              break
               clear
               echo -e "$Q 正在打开Yunzai-BOT后台日志"
               echo -e "$Q没有则是没有运行，请先后台运行再查看$N"
@@ -96,7 +92,6 @@ if [ -d "$HOME/$Yz" ];then
 
            #重置登录
            if [[ ${admin} = 5 ]];then
-           break
            pushd $Yz
            npm stop
     #删除虚拟设备信息
