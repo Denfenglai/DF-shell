@@ -26,7 +26,7 @@ sese=$(whiptail \
 --title "(⑅˃◡˂⑅)" \
 --menu "${ver}" \
 "当前路径: $Yz" \
-20 35 9 \
+17 35 7 \
 "1" "管理Yunzai-Bot" \
 "2" "安装Yunzai-Bot" \
 "3" "管理Yunzai插件" \
