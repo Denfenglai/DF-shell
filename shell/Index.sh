@@ -63,8 +63,8 @@ if [ -d "$HOME/$Yz" ];then
               pushd $Yz
               redis-server --daemonize yes
               npm stop
-              break
               node app
+              break
            fi
 
            #停止
@@ -72,6 +72,7 @@ if [ -d "$HOME/$Yz" ];then
               pushd $Yz
               pnpm run stop
               echo -e "$G Yunzai-BOT已停止运行 $N"
+              break
            fi
 
            if [[ ${admin} = 3 ]];then
@@ -89,6 +90,7 @@ if [ -d "$HOME/$Yz" ];then
               echo -e "$Q没有则是没有运行，请先后台运行再查看$N"
               pushd $Yz
               pnpm run log
+           break
            fi
 
            #重置登录
@@ -182,12 +184,14 @@ fi
     if [[ ${cha} = 1 ]]
     then
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/plugins-shell.sh)
+    break
     fi
 
     #调用卸载脚本
     if [[ ${cha} = 2 ]]
     then
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/Splugin.sh)
+    break
     fi
    fi
 
@@ -287,8 +291,8 @@ fi
 
 #自定义路径
 if [[ ${sese} -eq 8 ]]; then
-break
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yz.sh)
+break
 fi
 
 #退出
