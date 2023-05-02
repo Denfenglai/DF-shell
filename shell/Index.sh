@@ -44,7 +44,7 @@ if [ $feedback = 0 ];then
   if [[ ${sese} = 1 ]]
    then
    clear
-if [ -d "$HOME/$Yz" ];then
+if [ -d "$Yz" ];then
        admin=$(whiptail \
        --title "⚆_⚆？" \
        --menu "${ver}" \
