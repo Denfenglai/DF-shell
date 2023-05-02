@@ -322,7 +322,6 @@ if [[ ${sese} = 8 ]]
       fi
       ;;
   esac
-  break
   fi
   
 #退出
