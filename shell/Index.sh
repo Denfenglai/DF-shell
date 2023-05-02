@@ -19,7 +19,7 @@ else
 fi
 #定义云崽路径
 Yz=$(head -n 1 "${HOME}/.Yunzai")
-    
+
 while true
 do
 sese=$(whiptail \
@@ -66,7 +66,7 @@ if [ -d "$HOME/$Yz" ];then
               npm stop
               node app
            fi
-           
+
            #停止
            if [[ ${admin} = 2 ]];then
               break
@@ -74,7 +74,7 @@ if [ -d "$HOME/$Yz" ];then
               pnpm run stop
               echo -e "$G Yunzai-BOT已停止运行 $N"
            fi
-           
+
            if [[ ${admin} = 3 ]];then
              break
              pushd $Yz
@@ -83,7 +83,7 @@ if [ -d "$HOME/$Yz" ];then
              pnpm run start
              echo -e "$G Yunzai-BOT已在后台运行 $N"
            fi
-           
+
            #显示后台日志
            if [[ ${admin} = 4 ]];then
               break
@@ -93,7 +93,7 @@ if [ -d "$HOME/$Yz" ];then
               pushd $Yz
               pnpm run log
            fi
-           
+
            #重置登录
            if [[ ${admin} = 5 ]];then
            break
@@ -107,7 +107,7 @@ if [ -d "$HOME/$Yz" ];then
 fi
            pnpm run login
            fi
-           
+
            if [[ ${admin} = 6 ]];then
            pushd $Yz
            equipment=$(whiptail \
@@ -134,7 +134,7 @@ fi
              --inputbox "请输入您要更改后的主人qq号" \
              10 60 \
              3>&1 1>&2 2>&3)
-             
+
              if [[ $qq =~ ^[0-9]+$ ]]; then
              if [ $qq -gt 9999 ]; then
                  sed -i '7s/.*/'" - $qq"'/' $Yz/config/config/other.yaml
@@ -157,10 +157,10 @@ fi
     else
            whiptail --title "没有找到Yunzai-Botʕ•ᴥ•ʔ……" --msgbox "
            笨比，你都没有安装云崽，快去安装吧!
-           " 10 43        
+           " 10 43
     fi
  fi
-  
+
   #安装脚本
   if [[ ${sese} = 2 ]]
     then
@@ -169,7 +169,7 @@ fi
     echo -e "\e[32m 正在打开安装脚本 \e[0m"
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
   fi
-  
+
   #调用插件脚本
   if [[ ${sese} = 3 ]]
    then
@@ -182,19 +182,19 @@ fi
        "2"  "卸载插件" \
        "0"  "返回" \
        3>&1 1>&2 2>&3 )
-     #调用插件安装脚本      
+     #调用插件安装脚本
     if [[ ${cha} = 1 ]]
     then
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/plugins-shell.sh)
     fi
-    
+
     #调用卸载脚本
     if [[ ${cha} = 2 ]]
     then
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/Splugin.sh)
     fi
    fi
-  
+
   #调用修复脚本
   if [[ ${sese} = 4 ]]
     then
@@ -220,7 +220,7 @@ fi
        " 10 43
      fi
 fi
-  
+
   if [[ ${sese} = 6 ]]
    then
     #帮助菜单
@@ -234,7 +234,7 @@ fi
     打开脚本:d
     " 17 40 7
   fi
-  
+
   if [[ ${sese} = 7 ]]; then
     # 如果环境不存在，则下载等风来脚本
     if [ ! -f "/usr/local/bin/d" ]; then
@@ -249,8 +249,8 @@ fi
         } | whiptail --gauge "检测到新版本 正在更新" 6 60 0
         if ! [ -e "/usr/local/bin/d" ]; then
             # 下载失败，提示用户并退出
-            whiptail --title "等风来" --msgbox 
-            "安装失败 请检查网络" 
+            whiptail --title "等风来" --msgbox
+            "安装失败 请检查网络"
             8 25
             exit
         fi
@@ -275,7 +275,7 @@ fi
         if ! [ -e "/usr/local/bin/d" ]; then
             # 下载失败，提示用户并退出
             whiptail --title "❛‿˂̵✧" --msgbox \
-            "呜呜 被玩坏惹 肯定是网络的问题！" \ 
+            "呜呜 被玩坏惹 肯定是网络的问题！" \
             8 25
             exit
         fi
@@ -292,38 +292,37 @@ fi
 #自定义路径
 if [[ ${sese} = 8 ]]
   then
-  break
-  #清屏
-  clear
-  # 获取主目录
-  homedir=$(eval echo "~${USER}")
-  # 输出提示信息和分割线
-  echo "当前主目录下的目录"
-  echo "--------------------------------"
-  # 获取目录列表并排序
-  dir_list=()
-  while IFS= read -r -d '' dir; do
-  dir_list+=("$dir")
-  done < <(find "${homedir}" -maxdepth 1 -type d ! -name ".*" -print0 | sort -z)
-  # 输出所有非隐藏目录，并利用 select 提供选择菜单
-  PS3="请选择一个目录（输入 # 或 q 退出）："
-  select dir in "${dir_list[@]}"; do
-  case "$dir" in
-    "")      echo "无效的目录编号，请重试！";;
-    "#"|q)  echo "已退出，未作更改" > "${homedir}/.Yunzai"; exit;;
-    *)
-      if [ -d "${dir}/plugins" ]; then
-        echo "$dir" > "${homedir}/.Yunzai"
-        echo -e "\033[32m修改成功！\033[0m"
-        break
-      else
-        echo -e "\033[31m你选择的似乎不是一个Yunzai-BOT根目录，已取消修改\033[0m"
-        exit
-      fi
-      ;;
-  fi
-  esac
-  
+    break
+      #清屏
+        clear
+          # 获取主目录
+            homedir=$(eval echo "~${USER}")
+              # 输出提示信息和分割线
+                echo "当前主目录下的目录"
+                  echo "--------------------------------"
+                    # 获取目录列表并排序
+                      dir_list=()
+                        while IFS= read -r -d '' dir; do
+                          dir_list+=("$dir")
+                            done < <(find "${homedir}" -maxdepth 1 -type d ! -name ".*" -print0 | sort -z)
+                              # 输出所有非隐藏目录，并利用 select 提供选择菜单
+                                PS3="请选择一个目录（输入 # 或 q 退出）："
+                                  select dir in "${dir_list[@]}"; do
+                                    case "$dir" in
+                                        "")      echo "无效的目录编号，请重试！";;
+                                            "#"|q)  echo "已退出，未作更改" > "${homedir}/.Yunzai"; exit;;
+                                                *)
+                                                      if [ -d "${dir}/plugins" ]; then
+                                                              echo "$dir" > "${homedir}/.Yunzai"
+                                                                      echo -e "\033[32m修改成功！\033[0m"
+                                                                              break
+                                                                                    else
+                                                                                            echo -e "\033[31m你选择的似乎不是一个Yunzai-BOT根目录，已取消修改\033[0m"
+                                                                                                    exit
+                                                                                                          fi
+                                                                                                                ;;
+                                                                                                                  esac
+                                                                                                                    fi]]]]                                                                                                                                                                                      fi]]]]
 #退出
   if [[ ${sese} = 0 ]]
   then
