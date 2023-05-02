@@ -193,11 +193,6 @@ fi
     then
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/Splugin.sh)
     fi
-    else
-      whiptail --title "哦呀？" --msgbox "
-       您好像还没有未安装云崽呢，快去安装吧!
-       " 10 43
-     fi
    fi
   
   #调用修复脚本
