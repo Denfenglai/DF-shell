@@ -63,6 +63,7 @@ if [ -d "$HOME/$Yz" ];then
               pushd $Yz
               redis-server --daemonize yes
               npm stop
+              break
               node app
            fi
 
@@ -286,6 +287,7 @@ fi
 
 #自定义路径
 if [[ ${sese} -eq 8 ]]; then
+break
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yz.sh)
 fi
 
