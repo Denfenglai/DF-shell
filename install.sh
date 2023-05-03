@@ -41,7 +41,7 @@ if ! [ -e "/usr/local/bin/d" ];then
         echo $i
      done
   } | whiptail --gauge "未安装 正在安装" 6 60 0
-  sleep 0.5
+  sleep 2
   if ! [ -e "/usr/local/bin/bhyz" ];then
   whiptail --title "等风来" --msgbox \
   "安装失败 请检查网络" \
