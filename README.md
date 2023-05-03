@@ -1,5 +1,3 @@
-<hr/>
-</ul>
 <h1 align="center">Cvs-Yunzai</h1>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr/>
