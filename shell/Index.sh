@@ -15,7 +15,7 @@ if [ -f "$HOME/.Yunzai" ]; then
 else
   echo -e "\033[33m初始化文件中\033[0m"
   sleep 0.3
-  echo "~/Yunzai-Bot" > "$HOME/.Yunzai"
+  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
 fi
 #定义云崽路径
 Yz=$(head -n 1 "${HOME}/.Yunzai")
