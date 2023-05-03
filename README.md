@@ -39,19 +39,18 @@ pkg install -y curl
 ```
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
 ```
+
+<hr>
+
+## 三、电脑Windows等其他系统请使用 [TRSS.me](http://trss.me)
+>支持多平台、多系统以及多Bot搭建和管理<br>
+>一律[trss.me](http://trss.me)
 <hr>
 
 #### 作者列表
 | 作者 | QQ |QQ群|
 | --- | --- | --- |
 |等风来|3139373986|797434884|
-
-#### 推荐使用服务器
-<details><summary>国内大厂推荐</summary>
-[阿里云学生认证免费7个月](https://developer.aliyun.com/plan/student?taskCode=vmfeitian2023&recordId=5185977&userCode=agsac9la&share_source=copy_link&accounttraceid=84b8a5d467a640728134f3c336c86af9xvqn&share_source=copy_link
-)
-- [阿里云新人用户免费1个月](https://free.aliyun.com/?spm=5176.19720258.J_2937333540.14.542176f4tk9i3w&scm=20140722.M_9071891.P_141.MO_392-ID_9071891-MID_9071891-CID_21752-ST_6592-V_1)
-- [腾讯云新人用户一年50左右](https://cloud.tencent.com/act/pro/seckill_season?channel=sp&fromSource=gwzcw.7114194.7114194.7114194&utm_medium=cpc&utm_id=gwzcw.7114194.7114194.7114194)
 
 <hr/>
 
