@@ -12,7 +12,7 @@
 
 <hr/>
 
-## 一.Ubuntu系统直接安装脚本<br>
+## 一.[Ubuntu](https://www.baidu.com/s?wd=ubuntu%E6%98%AF%E4%BB%80%E4%B9%88)系统直接安装脚本<br>
 >如果您是服务器或者自备了`ubuntu` 请直接使用下面的命令<br>
 
 ```
@@ -29,11 +29,16 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 
 <hr>
 
-## 二、手机termux安装
+## 二、手机[Termux](https://www.baidu.com/s?wd=termux%E6%98%AF%E4%BB%80%E4%B9%88)安装
 
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)<br>
->选择下载`arm64`版 然后移步 [白狐](https://gitee.com/baihu433/Ubuntu-Yunzai)
-
+>选择下载`arm64`版 然后执行下面命令
+```
+pkg install -y curl
+```
+```
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
+```
 <hr>
 
 #### 作者列表
