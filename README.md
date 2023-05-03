@@ -32,7 +32,7 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 >[☞Termux下载地址](https://github.com/termux/termux-app/releases)<br>
 >选择下载`arm64`版 然后执行下面命令
 ```
-pkg install -y curl
+pkg update && pkg install -y curl
 ```
 ```
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
