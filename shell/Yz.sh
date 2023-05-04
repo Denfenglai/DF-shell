@@ -26,8 +26,8 @@ select dir in "${dir_list[@]}"; do
       exit
       ;;
     *)
-      if [ -d "${dir}/plugins" ]; then
-        echo "$dir" > "${homedir}/.Yunzai"
+      if [ -d "/root/${dir}/plugins" ]; then
+        echo "/root/$dir" > "${homedir}/.Yunzai"
         echo -e "\033[32m修改成功！\033[0m"
         break
       else
