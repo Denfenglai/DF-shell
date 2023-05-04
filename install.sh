@@ -32,31 +32,12 @@ if ! [ -x "$(command -v whiptail)" ]
     apt install whiptail -y
 fi
 
-# 要检查的字体的名称和文件名
-font_name="Arial"
-font_file="arial.ttf"
-
-# 检查字体是否已安装
-if fc-list : family file | grep -q "$font_name"; then
-    echo "$font_name 已经安装。"
-else
-    # 如果字体没有安装，则下载并安装它
-    echo "$font_name 未找到，正在下载安装..."
-    apt-get update
-    apt-get install -y language-pack-zh-han*
-    apt-get install -y ttf-mscorefonts-installer
-    fc-cache -f -v
-    echo "$font_name 已经安装。"
-fi
-
-# 将字体设置为默认字体
-echo "设置默认字体为 $font_name ..."
-echo "LANG=\"zh_CN.UTF-8\"" > /etc/default/locale
-echo "LC_ALL=\"$font_name\"" >> /etc/default/locale
-. /etc/default/locale
-echo "默认字体已设置为 $font_name。"
 #安装
 if ! [ -e "/usr/local/bin/d" ];then
+apt-get install language-pack-zh-han* -y
+echo "LANG=\"zh_CN.UTF-8\"
+export LANG">>/etc/profile
+source /etc/profile
   rm -rf /usr/local/bin/d
   wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
   {
