@@ -81,6 +81,7 @@ if [ -d "$Yz" ];then
              npm stop
              pnpm run start
              echo -e "$G Yunzai-BOT已在后台运行 $N"
+             break
            fi
 
            #显示后台日志
