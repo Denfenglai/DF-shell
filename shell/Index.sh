@@ -81,6 +81,7 @@ if [ -d "$Yz" ];then
              npm stop
              pnpm run start
              echo -e "$G Yunzai-BOT已在后台运行 $N"
+             break
            fi
 
            #显示后台日志
@@ -177,16 +178,19 @@ fi
     then
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
-        fi
+     break  
+     fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
     then
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Mzaz.sh)
+    break
     fi
     #早苗BOT
     if [[ ${install} = 3 ]]
     then
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
+    break
     fi
 
     fi
@@ -238,6 +242,7 @@ fi
   then
   if [ -d "$Yz" ];then
        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+    break
      else
       whiptail --title "哼╭(╯^╰)╮" --msgbox "
        你都没有安装云崽！哪来的错误码啊！
