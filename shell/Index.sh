@@ -166,7 +166,7 @@ fi
     clear
     echo -e "\e[34m 校验脚本成功 \e[0m"
     echo -e "\e[32m 正在打开安装脚本 \e[0m"
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/install-yz.sh)
   fi
 
   #调用插件脚本
