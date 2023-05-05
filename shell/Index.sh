@@ -181,6 +181,7 @@ fi
     if 
     #Miao-Yunzai
     if [[ ${an} = 2 ]]
+    then
     clear
     if [ -d "/root/Miao-Yunzai" ];then
         whiptail --title "Miao-Yunza已安装iʕ•ᴥ•ʔ……" --msgbox "
@@ -192,6 +193,7 @@ fi
     fi
     #早苗BOT
     if [[ ${an} = 3 ]]
+    then
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
     exit
     fi
