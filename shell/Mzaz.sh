@@ -1,10 +1,11 @@
 #!/bin/bash
 
-if [ -d "$HOME/Yunzai-Bot" ];then
+if [ -d "$HOME/Miao-Yunzai" ];then
        whiptail --title "等风来" --msgbox "
        您已安装喵崽 请勿重复安装
        " 10 43
-     else
+     exit
+     fi
 #定义颜色消息
 Green_font_prefix="\033[32m" && Red_font_prefix="\033[31m" && Red_background_prefix="\033[41;37m" && Font_color_suffix="\033[0m" && H_font_prefix="\033[33m"
 Info="${Green_font_prefix}[信息]${Font_color_suffix}"
@@ -367,4 +368,3 @@ echo -e "\e[1;36m快捷指令:
 \e[1;36m重置登录:\e[0m\e[32m mg\e[0m
 \e[1;36m停止运行:\e[0m\e[32m ms \e[0m"
 echo -e "\e[36m主人可以通过 “脚本-修改脚本路径” 切换要管理的目录\e[0m"
-fi
