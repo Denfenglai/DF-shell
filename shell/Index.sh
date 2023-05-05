@@ -177,7 +177,6 @@ fi
     then
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
-    break
         fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
