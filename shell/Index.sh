@@ -189,6 +189,8 @@ fi
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
     fi
 
+    fi
+
   #调用插件脚本
   if [[ ${sese} = 3 ]]
    then
