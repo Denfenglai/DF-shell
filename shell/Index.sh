@@ -163,7 +163,7 @@ fi
   if [[ ${sese} = 2 ]]
     then
     clear
-    an=$(whiptail \
+    install=$(whiptail \
        --title "⸜₍๑•⌔•๑₎⸝" \
        --menu "${ver}" \
        17 35 6 \
@@ -172,14 +172,14 @@ fi
        "3."  "早苗BOT" \
        3>&1 1>&2 2>&3 )
     #Yunzai-BOT
-    if [[ ${an} = 1 ]]
+    if [[ ${install} = 1 ]]
     then
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
     exit
         fi
     #Miao-Yunzai
-    if [[ ${an} = 2 ]]
+    if [[ ${install} = 2 ]]
     then
     clear
     if [ -d "/root/Miao-Yunzai" ];then
@@ -191,7 +191,7 @@ fi
     fi
     fi
     #早苗BOT
-    if [[ ${an} = 3 ]]
+    if [[ ${install} = 3 ]]
     then
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
     exit
