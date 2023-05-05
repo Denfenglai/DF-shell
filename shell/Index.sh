@@ -176,7 +176,7 @@ fi
     then
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
-    break
+    exit
         fi
     if 
     #Miao-Yunzai
