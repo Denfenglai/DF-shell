@@ -178,7 +178,6 @@ fi
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
     exit
         fi
-    if 
     #Miao-Yunzai
     if [[ ${an} = 2 ]]
     then
