@@ -167,9 +167,9 @@ fi
        --title "⸜₍๑•⌔•๑₎⸝" \
        --menu "${ver}" \
        17 35 6 \
-       "1."  "Yunzai-Bot"
-       "2."  "Miao-Yunzai"
-       "3."  "早苗BOT"
+       "1."  "Yunzai-Bot" \
+       "2."  "Miao-Yunzai" \
+       "3."  "早苗BOT" \
        3>&1 1>&2 2>&3 )
     #Yunzai-BOT
     if [[ ${an} = 1 ]]
