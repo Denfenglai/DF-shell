@@ -181,15 +181,8 @@ fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
     then
-    clear
-    if [ -d "/root/Miao-Yunzai" ];then
-        whiptail --title "已安装iʕ•ᴥ•ʔ……" --msgbox "
-            Miao-Yunzai 已安装 请勿套娃
-           " 10 43
-else
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Mzaz.sh)
     fi
-  fi
     #早苗BOT
     if [[ ${install} = 3 ]]
     then
