@@ -194,7 +194,6 @@ else
     if [[ ${install} = 3 ]]
     then
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
-    break
     fi
 
   #调用插件脚本
