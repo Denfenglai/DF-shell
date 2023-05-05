@@ -189,7 +189,6 @@ fi
            " 10 43
     else
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Mzaz.sh)
-    break
     fi
     #早苗BOT
     if [[ ${an} = 3 ]]
