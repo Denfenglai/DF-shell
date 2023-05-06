@@ -40,7 +40,8 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 |----|-----------------|
 | u  | 在Termux启动Ubuntu |
 | d  | 启动脚本            |
-- Yunzai-BOT
+####  Yunzai-BOT
+| 指令 | 说明              |
 |----|-----------------|
 | yz | CD云崽根目录         |
 | y  | 前台启动            |
@@ -48,21 +49,23 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 | l  | 查看日志            |
 | s  | 停止运行            |
 | g  | 重置登录            |
-- Miao-Yunzai
+#### Miao-Yunzai
+| 指令 | 说明              |
 |----|-----------------|
-| mz | CD喵崽根目录         |
-| m  | 前台启动喵崽         |
-| mr | 后台启动喵崽         | 
-| ml | 查看喵崽日志         |
-| ms | 停止喵崽运行         |
-| mg | 重置喵崽账号         |
-- 早苗Bot
+| mz | CD喵崽根目录         | 
+| m  | 前台启动喵崽         | 
+| mr | 后台启动喵崽         |  
+| ml | 查看喵崽日志         | 
+| ms | 停止喵崽运行         |  
+| mg | 重置喵崽账号         | 
+#### 早苗Bot
+| 指令 | 说明              |
 |----|-----------------|
 | h | 启动脚本             |
 
 
 
-# 作者列表
+#### 作者列表
 | 作者 | QQ |
 | --- | --- |
 |等风来|3139373986|
@@ -70,16 +73,16 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 <hr/>
 
 
-# 相关链接
+#### 相关链接
 
 - [Yunzai](https://gitee.com/Le-niao/Yunzai-Bot)
 - [Miao-Yunzai](https://gitee.com/yoimiya-kokomi/Miao-Yunzai)
-- [Miao-plugin](https://gitee.com/yoimiya-kokomi/miao-plugin))
+- [Miao-plugin](https://gitee.com/yoimiya-kokomi/miao-plugin)
 - [Yunzai插件库](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
 - [白狐Ubuntu-Yunzai](https://gitee.com/baihu433/Ubuntu-Yunzai)
 - [早苗狐](https://afdian.net/@Sanae)
 
-# 友情链接
+#### 友情链接
 - [XDM官网](https://hanxuan.cc/)
 - [TRSS官网](https://trss.me/)
 - [椰奶官网](https://www.yenai.ren/)
