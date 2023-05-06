@@ -139,6 +139,10 @@ exit 1
 else
  ：
 fi
+#ffmpeg
+     if [ ! -e /usr/local/bin/ ]; then
+       bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
+       fi
         
         # 克隆项目
         echo -e "\033[34m 正在克隆Yunzai-Bot \033[0m";
