@@ -335,7 +335,7 @@ if [ -e "/usr/bin/m" ]
            echo "alias mz='cd /root/Yunzai-Bot'" >> ~/.bashrc
            #启动
            echo echo 正在启动Miao-Yunzai > /usr/bin/m
-           sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && npm stop && clear && node app' /usr/bin/m
+           sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && npm stop && clear && node app' /usr/bin/mr
            chmod 777 /usr/bin/m
            #后台
            echo echo 后台启动Miao-Yunzai > /usr/bin/mr
@@ -343,11 +343,11 @@ if [ -e "/usr/bin/m" ]
            chmod 777 /usr/bin/mr
            #日志
            echo echo 打开Miao-Yunzai日志 > /usr/bin/ml
-           sed -i -e '1a cd ~/Miao-Yunzai && && clear && echo -e "\e[1;32m当前日志 没有则是没有启动\e[0m" && pnpm run log' /usr/bin/l 
+           sed -i -e '1a cd ~/Miao-Yunzai && && clear && echo -e "\e[1;32m当前日志 没有则是没有启动\e[0m" && pnpm run log' /usr/bin/ml 
            chmod 777 /usr/bin/ml
            #登录
            echo echo 启动Miao-Yunzai账号配置 > /usr/bin/mg
-           sed -i -e '1a cd ~/Miao-Yunzai && clear && pnpm run login' /usr/bin/g
+           sed -i -e '1a cd ~/Miao-Yunzai && clear && pnpm run login' /usr/bin/mg
            chmod 777 /usr/bin/mg
            #停止
            echo echo 正在停止Miao-Yunzai运行 > /usr/bin/ms
