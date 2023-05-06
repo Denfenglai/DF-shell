@@ -269,6 +269,7 @@ fi
     if [ ! -f "/usr/local/bin/d" ]; then
     clear
         wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1
+        chmod +x /usr/local/bin/d
         # 显示下载进度条
         {
             for ((i = 0 ; i <= 100 ; i+=1)); do
