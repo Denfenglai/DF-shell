@@ -323,7 +323,7 @@ if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
 fi
 
 #写入快捷命令
-if [ -e "/usr/bin/mz" ]
+if [ -e "/usr/bin/m" ]
            then
            echo -e "\033[34m 检测到已写入 \033[34m";
            echo "退出"
@@ -331,10 +331,8 @@ if [ -e "/usr/bin/mz" ]
            pushd $HOME 
            echo '正在将启动写入启动命令'
            #转到目录
-           echo cd  > /usr/bin/mz
-           sed -i -e '1a cd ~/Miao-Yunzai' /usr/bin/mz
-           chmod 777 /usr/bin/mz
-           
+           sed -i '/alias mz/d' ~/.bashrc
+           echo "alias mz='cd /root/Yunzai-Bot'" >> ~/.bashrc
            #启动
            echo echo 正在启动Miao-Yunzai > /usr/bin/m
            sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && npm stop && clear && node app' /usr/bin/m
