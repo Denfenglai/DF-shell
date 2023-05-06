@@ -37,7 +37,7 @@ if [ -d "$HOME/Yunzai-Bot" ];then
         #再查一次
         if ! command -v node &> /dev/null
 then
-    echo -e "\e[31m node.js 安装失败！请检查网络或尝试科学上网\e[0m"
+    echo -e "\e[31m node.js 安装失败！请检查网络\e[0m"
 else
     echo -e "\e[32mNode.js 安装成功！\e[0m"
 fi
