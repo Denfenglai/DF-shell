@@ -177,7 +177,7 @@ fi
     if [[ ${install} = 1 ]]
     then
     clear
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yzaz.sh)
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yzaz.sh)
      break  
      fi
     #Miao-Yunzai
