@@ -193,6 +193,7 @@ fi
     bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
     break
     fi
+ fi
 
 #安装ffmpeg
 if [[ ${install} = 4 ]]
