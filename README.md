@@ -2,7 +2,7 @@
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr>
 <div style="text-align: center;">
-  <img src="图片/辉夜大小姐.png" alt="辉夜" width="400" style="margin-top: 20px;">
+  <img src="图片/kakuya.png" alt="辉夜" width="400" style="margin-top: 20px;">
 </div>
 
 ---
