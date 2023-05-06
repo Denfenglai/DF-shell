@@ -1,9 +1,9 @@
 <h1 align="center">Dengfenglai-shell</h1>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
-<hr/>
-<ul>
-<img src="图片/辉夜大小姐.png" alt="辉夜" width = "400">
-  </a><br>
+<hr>
+<div style="text-align: center;">
+  <img src="图片/辉夜大小姐.png" alt="辉夜" width="400" style="margin-top: 20px;">
+</div>
 
 ---
 
