@@ -176,7 +176,7 @@ fi
         #写入自动命令
         if [ -e "/usr/bin/dfl" ]
            then
-           echo -e "\033[34m 检测到已写入 \033[34m";
+           echo -e "\033[34m 检测到已写入 \033[0m";
            echo "退出"
         else
            pushd $HOME 
