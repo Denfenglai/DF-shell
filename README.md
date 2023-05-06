@@ -35,7 +35,10 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 >一律[trss.me](http://trss.me)
 <hr>
 
-#### 快捷命令
+<details>
+  <summary>脚本快捷命令</summary>
+
+  #### 快捷命令
 | 指令 | 说明              |
 |----|-----------------|
 | u  | 在Termux启动Ubuntu |
@@ -62,6 +65,9 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 | 指令 | 说明              |
 |----|-----------------|
 | h | 启动脚本             |
+
+</details>
+
 
 <hr/>
 
