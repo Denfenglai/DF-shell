@@ -6,17 +6,16 @@
   </a><br>
 
 <hr/>
-<hr/>
 
 ## 一.[Ubuntu](https://www.baidu.com/s?wd=ubuntu%E6%98%AF%E4%BB%80%E4%B9%88)系统直接安装脚本<br>
->如果您是服务器或者自备了`ubuntu` 请直接使用下面的命令<br>
 
+>如果您是服务器或者自备了`ubuntu` 请直接使用下面的命令<br>
 
 ```
 apt update && apt install curl -y && bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
 ```
 
-<li>首次启动脚本似乎会自动关闭，再执行一遍就好了喵<li>
+<li>首次启动脚本似乎会自动关闭，再执行一遍就好了喵
 
 <hr>
 
@@ -41,7 +40,7 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 |----|-----------------|
 | u  | 在Termux启动Ubuntu |
 | d  | 启动脚本            |
-####  Yunzai-BOT
+#### Yunzai-BOT快捷命令
 | 指令 | 说明              |
 |----|-----------------|
 | yz | CD云崽根目录         |
@@ -50,7 +49,7 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 | l  | 查看日志            |
 | s  | 停止运行            |
 | g  | 重置登录            |
-#### Miao-Yunzai
+#### Miao-Yunzai快捷命令
 | 指令 | 说明              |
 |----|-----------------|
 | mz | CD喵崽根目录         | 
@@ -59,7 +58,7 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 | ml | 查看喵崽日志         | 
 | ms | 停止喵崽运行         |  
 | mg | 重置喵崽账号         | 
-#### 早苗Bot
+#### 早苗Bot快捷命令
 | 指令 | 说明              |
 |----|-----------------|
 | h | 启动脚本             |
