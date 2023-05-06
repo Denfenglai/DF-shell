@@ -6,7 +6,6 @@
   </a><br>
 
 <hr/>
-
 ## 一.[Ubuntu](https://www.baidu.com/s?wd=ubuntu%E6%98%AF%E4%BB%80%E4%B9%88)系统直接安装脚本<br>
 
 >如果您是服务器或者自备了`ubuntu` 请直接使用下面的命令<br>
