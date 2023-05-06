@@ -171,6 +171,7 @@ fi
        "1" "Yunzai-Bot" \
        "2" "Miao-Yunzai" \
        "3" "早苗BOT" \
+       "4" "安装ffmpeg" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
     #Yunzai-BOT
@@ -193,6 +194,12 @@ fi
     break
     fi
 
+#安装ffmpeg
+if [[ ${install} = 4 ]]
+    then
+        clear
+    bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
+    break
     fi
 
   #调用插件脚本
