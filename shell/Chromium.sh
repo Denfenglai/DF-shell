@@ -3,11 +3,23 @@
 # 清屏
 clear
 
+#初始化加载
+if [ -f "$HOME/.Yunzai" ]; then
+  echo -e "\033[32m校验成功\033[0m"
+else
+  echo -e "\033[33m初始化文件中\033[0m"
+  sleep 0.3
+  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+fi
+#定义云崽路径
+Yz=$(head -n 1 "${HOME}/.Yunzai")
+
 # 添加菜单选项
 echo "================================"
 echo "   Chromium puppeteer修复            "
 echo "================================"
-echo "1.  Chromium降级"
+echo "当前路径:$Yz
+1.  Chromium降级"
 echo "2.  使用install.js"
 echo "3.  使用apt包安装"
 echo "4.  调用甘雨大佬的修复"
@@ -55,51 +67,51 @@ case $choice in
            architecture=$(uname -m)
             if [ "$architecture" = "aarch64" ]; then
              echo -e "\033[34m 调用甘雨大佬的浏览器修复 感谢 \033[0m";
-             pushd $HOME
+             pushd 
              apt-get autoremove chromium-browser -y
              git clone --depth=1 https://gitee.com/Ganyu256/chromium
              pushd chromium
              bash install.sh
-             pushd $HOME
+             pushd 
              rm -rf chromium
              rm -rf chromium
-             pushd Yunzai-Bot
+             pushd $Yz
              pnpm install -P
-             pushd $HOME
-             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $HOME/Yunzai-Bot/config/config/bot.yaml
+             pushd 
+             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $Yz/config/config/bot.yaml
              echo;echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
             elif [ "$architecture" = "armv8l" ]; then
              echo -e "\033[34m 调用甘雨大佬的浏览器修复 感谢 \033[0m";
-             pushd $HOME
+             pushd 
              apt-get autoremove chromium-browser -y
              git clone --depth=1 https://gitee.com/Ganyu256/chromium
              pushd chromium
              bash install.sh
-             pushd $HOME
+             pushd 
              rm -rf chromium
              rm -rf chromium
-             pushd Yunzai-Bot
+             pushd $Yz
              pnpm install -P
-             pushd $HOME
-             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $HOME/Yunzai-Bot/config/config/bot.yaml
+             pushd 
+             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $Yz/config/config/bot.yaml
              echo;echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
             elif [ "$architecture" = "x86_64" ]; then
              if [ "$Ubuntuv" == "18.04" ]; then
-             pushd Yunzai-Bot
+             pushd $Yz
              node ./node_modules/puppeteer/install.js
              pnpm install -P
              elif [ "$Ubuntuv" == "22.04" ]; then
              apt install snapd -y
              snap install chromium
-             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $HOME/Yunzai-Bot/config/config/bot.yaml
+             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $Yz/config/config/bot.yaml
              elif [ "$Ubuntuv" == "22.10" ]; then
              apt install snapd -y
              snap install chromium
-             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $HOME/Yunzai-Bot/config/config/bot.yaml
+             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $Yz/config/config/bot.yaml
              else
-             pushd Yunzai-Bot
+             pushd $Yz
              node ./node_modules/puppeteer/install.js
-             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $HOME/Yunzai-Bot/config/config/bot.yaml
+             sed -i "13s/.*/chromium_path: \/usr\/bin\/chromium-browser/g" $Yz/config/config/bot.yaml
              fi
              echo;echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
             else
