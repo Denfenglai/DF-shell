@@ -184,11 +184,11 @@ fi
            echo "退出"
         else
            pushd $HOME 
-           echo '正在将启动写入启动命令'
+            echo '正在写入快捷命令'
+            sed -i '/alias yz/d' ~/.bashrc
+            sed -i '/alias l/d' ~/.bashrc
            #转到云崽目录
-           echo cd ~/Yunzai-Bot > /usr/bin/yz
-           sed -i -e '1a cd ~/Yunzai-Bot' /usr/bin/yz
-           chmod 777 /usr/bin/yz
+           echo "alias yz='cd /root/Yunzai-Bot'" >> ~/.bashrc
            #启动
            echo echo 正在启动Yunzai-Bot > /usr/bin/y
            sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && node app' /usr/bin/y 
@@ -198,9 +198,7 @@ fi
            sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && pnpm run start' /usr/bin/r
            chmod 777 /usr/bin/r
            #日志
-           echo echo 打开Yunzai-Bot日志 > /usr/bin/l
-           sed -i -e '1a cd ~/Yunzai-Bot && pnpm run log' /usr/bin/l 
-           chmod 777 /usr/bin/l
+           echo "alias l='cd /root/Yunzai-Bot && clear && echo -e \"\e[1;32m当前日志 如果没有则是没启动云崽\e[0m\" && npm run log'" >> ~/.bashrc
            #登录
            echo echo 启动Yunzai-Bot账号配置 > /usr/bin/g
            sed -i -e '1a cd ~/Yunzai-Bot && pnpm run login' /usr/bin/g
