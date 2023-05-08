@@ -179,13 +179,11 @@ fi
     then
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yzaz.sh)
-     break  
      fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
     then
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Mzaz.sh)
-    break
     fi
     #早苗BOT
     if [[ ${install} = 3 ]]
