@@ -277,7 +277,9 @@ fi
    then
     #帮助菜单
     whiptail --title "帮助" --msgbox "
-    项目地址:https://gitee.com/Wind-is-so-strong/yz
+    项目地址:
+    https://gitee.com/Wind-is-so-strong/yz
+    作者QQ:3139373986
     使用有任何问题可以加群:751976647
     " 17 40 7
   fi
