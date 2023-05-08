@@ -39,12 +39,14 @@ read choice
 case $choice in
     1)
         #强制降级
+        cd $Yz
         pnpm add puppeteer@13.7.0 -w --force
         echo -e "\033[32m 修复完成 \033[0m"
         exit 0
         ;;
     2)
         #完全卸载旧版Chromium
+        cd $Yz
         pnpm uninstall puppeteer
         pnpm install puppeteer@19.7.3 -w
         echo "开始使用install.js安装"
@@ -121,6 +123,7 @@ case $choice in
         ;;
     5)
         echo "套用白狐佬的脚本，适配了Ubuntu22.04哦~"
+        cd $Yz
         bash <(curl https://gitee.com/baihu433/chromium/raw/master/chromium.sh)
         ;;
 #退出    
