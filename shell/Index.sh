@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.1.14
+ver=0.1.15
 
 # 定义颜色变量
 N="\e[0m"
@@ -31,7 +31,7 @@ sese=$(whiptail \
 "2" "安装管理" \
 "3" "管理Yunzai插件" \
 "4" "报错修复" \
-"5" "错误码修复" \
+"5" "其他功能" \
 "6" "帮助" \
 "7" "更新脚本" \
 "8" "修改脚本路径" \
@@ -171,7 +171,6 @@ fi
        "1" "Yunzai-Bot" \
        "2" "Miao-Yunzai" \
        "3" "早苗BOT" \
-       "4" "安装ffmpeg" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
     #Yunzai-BOT
@@ -193,13 +192,6 @@ fi
     fi
  fi
 
-#安装ffmpeg
-if [[ ${install} = 4 ]]
-    then
-        clear
-    bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
-    break
-    fi
 
   #调用插件脚本
   if [[ ${sese} = 3 ]]
@@ -243,30 +235,50 @@ if [[ ${install} = 4 ]]
       fi
 fi
 
-  #打开错误码修复脚本
+  #打开其他脚本
   if [[ ${sese} = 5 ]]
   then
-  if [ -d "$Yz" ];then
-       bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+  clear
+    qt=$(whiptail \
+       --title "⸜₍๑•⌔•๑₎⸝" \
+       --menu "${ver}
+当前路径:$Yz" \
+       17 35 6 \
+       "1" "安装ffmpeg" \
+       "2" "安装Python 3.9.15和Poetry" \
+       "3" "搭载喵喵面板图" \
+       "4" "搭载喵喵涩涩面板图" \
+       "0" "返回" \
+       3>&1 1>&2 2>&3 )
+#安装ffmpeg
+if [[ ${qt} = 1 ]];then
+clear
+    bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
     break
-     else
-      whiptail --title "哼╭(╯^╰)╮" --msgbox "
-       你都没有安装云崽！哪来的错误码啊！
-       " 10 43
-     fi
+    fi
+    
+    if [[ ${qt} = 2 ]];then
+    clear
+    bash <(curl -sL https://gitee.com/haanxuan/Python/raw/master/Python3915.sh)
+    fi
+    
+    if [[ ${qt} = 3 ]];then
+    clear
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/XDMGraph.sh)
+    fi
+    
+    if [[ ${qt} = 4 ]];then
+    clear
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/SeseGraph.sh)
+    fi
 fi
 
   if [[ ${sese} = 6 ]]
    then
     #帮助菜单
     whiptail --title "帮助" --msgbox "
-    快捷命令
-    前台启动:y
-    后台启动:r
-    重置账号:g
-    查看日志:l
-    停止运行:s
-    打开脚本:d
+    项目地址:https://gitee.com/Wind-is-so-strong/yz
+    使用有任何问题可以加群:751976647
     " 17 40 7
   fi
 
