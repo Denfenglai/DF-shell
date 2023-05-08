@@ -213,5 +213,8 @@ fi
            pushd 
            echo
         fi
+        echo -en "\033[32m 安装完成 回车开始登录\033[0m";read -p ""
+        cd $Yz
+        node app
     fi
     
