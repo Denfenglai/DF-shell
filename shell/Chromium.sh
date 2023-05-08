@@ -40,23 +40,24 @@ case $choice in
     1)
         #强制降级
         cd $Yz
+        npm stop
         pnpm add puppeteer@13.7.0 -w --force
-        echo -e "\033[32m 修复完成 \033[0m"
-        exit 0
+        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         ;;
     2)
         #完全卸载旧版Chromium
         cd $Yz
+        npm stop
         pnpm uninstall puppeteer
         pnpm install puppeteer@19.7.3 -w
         echo "开始使用install.js安装"
         node ./node_modules/puppeteer/install.js
-        echo -e "\033[32m 修复完成 \033[0m"
-        exit 0
+        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         ;;
     3)
         echo "使用apt包安装Chromium"
         #卸载
+        npm stop
         apt remove chromium -y
         #安装
         apt-get install chromium-browser
@@ -124,8 +125,10 @@ case $choice in
     5)
         echo "套用白狐佬的脚本，适配了Ubuntu22.04哦~"
         cd $Yz
+        npm stop
         bash <(curl https://gitee.com/baihu433/chromium/raw/master/chromium.sh)
-        ;;
+       echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+       ;;
 #退出    
     0)
         echo -e "\033[34m 感谢您的使用！\033[34m"

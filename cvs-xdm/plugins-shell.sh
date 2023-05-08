@@ -183,6 +183,7 @@ clear
 cd $Yz
 	    echo -e "\e[1;32m开始执行椰奶插件安装命令.\e[0m"
 git clone https://gitee.com/yeyang52/yenai-plugin.git ./plugins/yenai-plugin
+echo -e "\e[1;32m开始执行椰奶插件依赖安装命令\e[0m"
 pnpm install
 echo -e "\e[1;32m椰奶插件安装成功.\e[0m"
         ;;
