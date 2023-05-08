@@ -47,6 +47,7 @@ else
    rm -rf data/device.json
 fi
  echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        break
         ;;
         
         #装
