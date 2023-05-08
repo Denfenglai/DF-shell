@@ -351,7 +351,7 @@ if [ -e "/usr/bin/m" ]
            chmod 777 /usr/bin/mg
            #停止
            echo echo 正在停止Miao-Yunzai运行 > /usr/bin/ms
-           sed -i -e '1a cd ~/Miao-Yunzai && pnpm stop && clear && echo -e "\e[1;32mMiao-Yunzai已停止运行\e[0m"' /usr/bin/ms
+           sed -i -e '1a cd ~/Miao-Yunzai && pnpm stop && clear && echo Miao-Yunzai已停止运行' /usr/bin/ms
            chmod 777 /usr/bin/ms
         fi
 
