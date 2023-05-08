@@ -343,7 +343,7 @@ if [ -e "/usr/bin/m" ]
            chmod 777 /usr/bin/mr
            #日志
            echo echo 打开Miao-Yunzai日志 > /usr/bin/ml
-           sed -i -e '1a cd ~/Miao-Yunzai && && clear && echo -e "\e[1;32m当前日志 没有则是没有启动\e[0m" && pnpm run log' /usr/bin/ml 
+           sed -i -e '1a cd ~/Miao-Yunzai && clear && echo "当前日志 没有则是没有启动" && pnpm run log' /usr/bin/ml 
            chmod 777 /usr/bin/ml
            #登录
            echo echo 启动Miao-Yunzai账号配置 > /usr/bin/mg
