@@ -187,6 +187,7 @@ fi
            echo '正在将启动写入启动命令'
            #转到云崽目录
            echo cd ~/Yunzai-Bot > /usr/bin/yz
+           sed -i -e '1a cd ~/Yunzai-Bot' /usr/bin/yz
            chmod 777 /usr/bin/yz
            #启动
            echo echo 正在启动Yunzai-Bot > /usr/bin/y
