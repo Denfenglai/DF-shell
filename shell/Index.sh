@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.1.15
+ver=0.1.16
 
 # 定义颜色变量
 N="\e[0m"
@@ -177,8 +177,15 @@ fi
     if [[ ${install} = 1 ]]
     then
     clear
+    if [ -d "$HOME/Yunzai-Bot" ];then
+       whiptail --title "等风来" --msgbox "
+       您已安装云崽 禁止套娃
+       " 10 43
+     else
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yzaz.sh)
-     fi
+    break
+ fi
+ fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
     then

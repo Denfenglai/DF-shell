@@ -1,9 +1,5 @@
 #!/bin/bash
-if [ -d "$HOME/Yunzai-Bot" ];then
-       whiptail --title "等风来" --msgbox "
-       您已安装云崽 禁止套娃
-       " 10 43
-     else
+
        # 更新软件源和软件
         echo -e "\033[34m 更新软件源 \033[0m";
         apt update -y
@@ -159,7 +155,7 @@ fi
         
         #安装Yunzai依赖
         echo -e "\033[34m 安装依赖 \033[0m";
-        pushd ~/Yunzai-Bot
+        cd ~/Yunzai-Bot
         pnpm install -P && pnpm install -P
         
         #蜜汁22.04
@@ -213,7 +209,6 @@ fi
            echo
         fi
         echo -en "\033[32m 安装完成 回车开始登录\033[0m";read -p ""
-        cd $Yz
+        cd ~/Yunzai-Bot
         node app
-    fi
     
