@@ -115,7 +115,7 @@ bash <(curl -sL https://gitee.com/haanxuan/yzai-pd/raw/master/Splugins.sh)
         ;;
 #———————————————————————————————————————————————————————————————
         1)
-bash /root/XDM/Help.sh
+d
         exit
         ;;
 #———————————————————————————————————————————————————————————————        

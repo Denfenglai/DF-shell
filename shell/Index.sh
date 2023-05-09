@@ -105,7 +105,8 @@ if [ -d "$Yz" ];then
        rm -rf data/device.json
 fi
            pnpm run login
-           fi
+           break
+       fi
 
            if [[ ${admin} = 6 ]];then
            pushd $Yz
