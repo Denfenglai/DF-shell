@@ -110,7 +110,7 @@ git clone https://gitee.com/TimeRainStarSky/TRSS-Plugin.git ./plugins/TRSS-Plugi
         ;;
 #———————————————————————————————————————————————————————————————
         X|x)
-bash <(curl -sL https://gitee.com/haanxuan/yzai-pd/raw/master/Splugins.sh)
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/Splugin.sh)
         exit
         ;;
 #———————————————————————————————————————————————————————————————
