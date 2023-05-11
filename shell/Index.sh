@@ -247,7 +247,6 @@ fi
   #调用修复脚本
   if [[ ${sese} = 4 ]];then
     clear
-    echo -e "\e[1;32m正在打开修复菜单\e[0m"
     if [ -d "$Yz" ];then
     bc=$(whiptail \
        --title "报错修复" \
