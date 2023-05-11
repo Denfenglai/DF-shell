@@ -224,6 +224,7 @@ fi
     #调用卸载脚本
     if [[ ${cha} = 2 ]]
     then
+        cd $Yz
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/rm.sh)
     break
     fi
