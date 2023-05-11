@@ -275,6 +275,7 @@ fi
         if [[ ${bc} = 3 ]];then
         clear
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+        fi
      else
      whiptail --title "哦呀？" --msgbox "
      请检查你是否正确安装云崽并设置脚本路径

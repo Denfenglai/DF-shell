@@ -218,3 +218,14 @@
 
 2023-05-11 03:52:23 (2.43 MB/s) - “/usr/local/bin/d” 已保存 [11011]
 
+--2023-05-11 15:53:51--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.190, 212.64.63.215
+正在连接 gitee.com (gitee.com)|212.64.63.190|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 9053 (8.8K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ........                                              100% 1.97M=0.004s
+
+2023-05-11 15:53:51 (1.97 MB/s) - 已保存 “/usr/local/bin/d” [9053/9053])
+
