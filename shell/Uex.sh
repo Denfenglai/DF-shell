@@ -60,6 +60,6 @@ if [[ $confirmation =~ ^([yY]|[yY][eE][sS])$ ]]; then
     # 输出删除成功信息
     echo -en "\033[32m 卸载完成 回车返回\033[0m";read -p ""
 else
-    echo "操作已取消。正在退出.."
+    echo -en "操作已取消。回车退出..";read -p ""
     exit 0
 fi
