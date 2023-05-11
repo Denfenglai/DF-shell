@@ -1,6 +1,36 @@
 #!/bin/bash
 
-ver=0.1.17
+ver=0.1.18
+
+echo "校验版本中"
+# 检查脚本版本是否最新，如果不是则下载最新版本
+    version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
+    clear
+    if [ "$version" != "$ver" ]; then
+        rm -rf /usr/local/bin/d
+        wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
+        # 显示下载进度条
+        {
+            for ((i = 0 ; i <= 100 ; i+=1)); do
+                sleep 0.01s
+                echo $i
+            done
+        } | whiptail --gauge "有新版本辣 正在更新！" 6 60 0
+        if ! [ -e "/usr/local/bin/d" ]; then
+            # 下载失败，提示用户并退出
+            whiptail --title "థ౪థ " --msgbox \
+            "呜呜 被玩坏惹 肯定是网络的问题！" \
+            8 25
+            exit
+        fi
+        chmod +x /usr/local/bin/d
+        d
+    else
+        # 版本最新，提示用户
+        clear
+        echo -e "\033[32m脚本校验成功\033[0m"
+    fi
+
 
 # 定义颜色变量
 N="\e[0m"
@@ -251,7 +281,8 @@ fi
     qt=$(whiptail \
        --title "⸜₍๑•⌔•๑₎⸝" \
        --menu "${ver}
-当前路径:$Yz" \
+当前路径:$Yz
+功能等待完善，有需求可以加群295204145" \
        17 35 6 \
        "1" "安装ffmpeg" \
        "2" "安装Python 3.9.15和Poetry" \
@@ -286,10 +317,11 @@ fi
    then
     #帮助菜单
     whiptail --title "帮助" --msgbox "
-    项目地址:
-    https://gitee.com/Wind-is-so-strong/yz
-    作者QQ:3139373986
-    使用有任何问题可以加群:751976647
+项目地址:
+https://gitee.com/Wind-is-so-strong/yz
+作者QQ:3139373986
+使用有任何问题或有脚本需求可以加群:
+295204145
     " 17 40 7
   fi
 
