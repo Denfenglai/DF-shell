@@ -240,8 +240,9 @@ fi
        --menu "${ver}
 当前路径: $Yz" \
        17 35 6 \
-       "1"  "安装插件" \
-       "2"  "卸载插件" \
+       "1"  "安装plugin插件" \
+       "2"  "卸载plugin插件" \
+       "3"  "卸载js插件" \
        "0"  "返回" \
        3>&1 1>&2 2>&3 )
      #调用插件安装脚本
@@ -256,6 +257,11 @@ fi
         cd $Yz
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/rm.sh)
     break
+    fi
+    
+    if [[ ${cha} = 3 ]];then
+    cd $Yz
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Uex.sh)
     fi
 fi
 

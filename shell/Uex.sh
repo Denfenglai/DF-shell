@@ -58,7 +58,7 @@ if [[ $confirmation =~ ^([yY]|[yY][eE][sS])$ ]]; then
         fi
     done
     # 输出删除成功信息
-    echo "所有选定的插件都已删除。"
+    echo -en "\033[32m 卸载完成 回车返回\033[0m";read -p ""
 else
     echo "操作已取消。正在退出.."
     exit 0
