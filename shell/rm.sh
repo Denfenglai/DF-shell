@@ -24,7 +24,8 @@ excluded_dirs=("example" "genshin" "system" "other")
 
 # 开始循环输出目录
 echo -e "\033[34m以下目录可以删除：\033[0m"
-echo -e "\033[31m注意！删除是不可逆的！请谨慎操作！\033[0m"
+echo -e "\033[31m注意！删除是不可逆的！请谨慎操作！
+当前管理的Bot:$Yz\033[0m"
 count=0
 for dir in $plugin_dirs; do
   # 检查这个目录是否需要排除
