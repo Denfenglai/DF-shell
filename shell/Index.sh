@@ -1,22 +1,37 @@
 #!/bin/bash
 
-ver=0.2.1
+ver=0.2.2
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
 version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng)
 clear
 if [ "$version" != "$ver" ]; then
-    rm -rf /usr/local/bin/d
-    # 使用 curl 命令下载文件，并显示下载进度和文件大小
-    curl -L --show-error --output /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh --progress-bar
-    # 如果下载文件不存在或大小为 0，则报错并退出脚本
-    if [ ! -e "/usr/local/bin/d" ] || [ $(stat -c %s /usr/local/bin/d) -eq 0 ]; then
+    # 下载最新版本脚本
+    curl -L --show-error --fail --retry 3 --output /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh --progress-bar
+    if [ $? -ne 0 ]; then
+        # 下载文件失败
+        echo "下载文件失败"
+        exit 1
+    elif [ $(stat -c %s /usr/local/bin/d) -eq 0 ]; then
+        # 文件大小为零
         echo "下载文件失败或文件大小为 0"
         exit 1
+    else
+        # 添加执行权限
+        chmod +x /usr/local/bin/d
+        # 检查是否已添加到 PATH 环境变量中
+        if ! type -P d &>/dev/null; then
+            echo 'd 命令未添加到 $PATH 中，请手动添加。'
+        else
+            # 执行最新版本脚本
+            d
+        fi
     fi
-    chmod +x /usr/local/bin/d
-    d
+else
+    # 版本最新，提示用户
+    clear
+    echo -e "\033[32m脚本校验成功\033[0m"
 fi
 
 # 定义颜色变量
