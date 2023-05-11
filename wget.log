@@ -1,0 +1,209 @@
+--2023-05-11 03:46:48--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 未指定 [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                             1.52M=0.007s
+
+2023-05-11 03:46:48 (1.52 MB/s) - “/usr/local/bin/d” 已保存 [10546]
+
+--2023-05-11 03:46:49--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.54M=0.007s
+
+2023-05-11 03:46:50 (1.54 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:46:51--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.50M=0.007s
+
+2023-05-11 03:46:51 (1.50 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:46:52--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.46M=0.007s
+
+2023-05-11 03:46:53 (1.46 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:46:54--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.50M=0.007s
+
+2023-05-11 03:46:54 (1.50 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:46:55--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.52M=0.007s
+
+2023-05-11 03:46:56 (1.52 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:47:11--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.51M=0.007s
+
+2023-05-11 03:47:11 (1.51 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:47:12--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.80M=0.006s
+
+2023-05-11 03:47:12 (1.80 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:47:13--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.47M=0.007s
+
+2023-05-11 03:47:14 (1.47 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:47:50--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.51M=0.007s
+
+2023-05-11 03:47:50 (1.51 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:47:51--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.49M=0.007s
+
+2023-05-11 03:47:52 (1.49 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:35--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.52M=0.007s
+
+2023-05-11 03:48:35 (1.52 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:36--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.47M=0.007s
+
+2023-05-11 03:48:36 (1.47 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:38--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.79M=0.006s
+
+2023-05-11 03:48:38 (1.79 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:39--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.50M=0.007s
+
+2023-05-11 03:48:39 (1.50 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:40--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.52M=0.007s
+
+2023-05-11 03:48:41 (1.52 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:42--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.46M=0.007s
+
+2023-05-11 03:48:42 (1.46 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:43--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.49M=0.007s
+
+2023-05-11 03:48:43 (1.49 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+
+--2023-05-11 03:48:45--  https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+正在解析主机 gitee.com (gitee.com)... 212.64.63.215, 212.64.63.190
+正在连接 gitee.com (gitee.com)|212.64.63.215|:443... 已连接。
+已发出 HTTP 请求，正在等待回应... 200 OK
+长度： 10546 (10K) [text/plain]
+正在保存至: “/usr/local/bin/d”
+
+     0K ..........                                            100% 1.50M=0.007s
+
+2023-05-11 03:48:46 (1.50 MB/s) - 已保存 “/usr/local/bin/d” [10546/10546])
+

@@ -4,33 +4,37 @@ ver=0.1.18
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
-    version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
-    clear
-    if [ "$version" != "$ver" ]; then
-        rm -rf /usr/local/bin/d
-        wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
-        # 显示下载进度条
-        {
-            for ((i = 0 ; i <= 100 ; i+=1)); do
-                sleep 0.01s
-                echo $i
-            done
-        } | whiptail --gauge "有新版本辣 正在更新！" 6 60 0
-        if ! [ -e "/usr/local/bin/d" ]; then
-            # 下载失败，提示用户并退出
-            whiptail --title "థ౪థ " --msgbox \
-            "呜呜 被玩坏惹 肯定是网络的问题！" \
-            8 25
-            exit
-        fi
-        chmod +x /usr/local/bin/d
-        d
-    else
-        # 版本最新，提示用户
-        clear
-        echo -e "\033[32m脚本校验成功\033[0m"
+version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
+clear
+if [ "$version" != "$ver" ]; then
+    rm -rf /usr/local/bin/d
+    # 使用 --show-progress 选项来显示下载进度和速度
+    # 使用 -O 选项来将下载内容保存到文件中
+    curl -L --show-error --output /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh --progress-bar
+    # 获取下载文件大小，单位为 bytes
+    size=$(curl -sI https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh | grep 'Content-Length' | awk '{print $2}')
+    # 转换文件大小为更易读的形式，例如 MB
+    size=$(echo "scale=2; $size/1024/1024" | bc)
+    # 显示下载文件大小和更新进度条
+    {
+        for ((i = 1 ; i <= 100 ; i+=1)); do
+            sleep 0.01s
+            echo $i
+        done
+    } | whiptail --gauge "有新版本 $ver，正在下载（$size MB）..." 6 60 0
+    # 检查下载文件是否存在和大小是否合理
+    if [ ! -e "/usr/local/bin/d" ] || (( $(stat --printf="%s" /usr/local/bin/d) < $size )); then
+        # 下载失败，提示用户并退出
+        whiptail --title "下载失败" --msgbox "下载失败，请检查网络连接或稍后重试！" 8 25
+        exit
     fi
-
+    chmod +x /usr/local/bin/d
+    d
+else
+    # 版本最新，提示用户
+    clear
+    echo -e "\033[32m脚本校验成功\033[0m"
+fi
 
 # 定义颜色变量
 N="\e[0m"
