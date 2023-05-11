@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.1.16
+ver=0.1.17
 
 # 定义颜色变量
 N="\e[0m"
@@ -224,7 +224,7 @@ fi
     #调用卸载脚本
     if [[ ${cha} = 2 ]]
     then
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/Splugin.sh)
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/rm.sh)
     break
     fi
    fi
