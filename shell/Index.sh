@@ -8,32 +8,14 @@ version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.s
 clear
 if [ "$version" != "$ver" ]; then
     rm -rf /usr/local/bin/d
-    # 使用 --show-progress 选项来显示下载进度和速度
-    # 使用 -O 选项来将下载内容保存到文件中
+    # 使用 curl 命令下载文件，并显示下载进度和文件大小
     curl -L --show-error --output /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh --progress-bar
-    # 获取下载文件大小，单位为 bytes
-    size=$(curl -sI https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh | grep 'Content-Length' | awk '{print $2}')
-    # 转换文件大小为更易读的形式，例如 MB
-    size=$(echo "scale=2; $size/1024/1024" | bc)
-    # 显示下载文件大小和更新进度条
-    {
-        for ((i = 1 ; i <= 100 ; i+=1)); do
-            sleep 0.01s
-            echo $i
-        done
-    } | whiptail --gauge "有新版本 $ver，正在下载（$size MB）..." 6 60 0
-    # 检查下载文件是否存在和大小是否合理
-    if [ ! -e "/usr/local/bin/d" ] || (( $(stat --printf="%s" /usr/local/bin/d) < $size )); then
-        # 下载失败，提示用户并退出
-        whiptail --title "下载失败" --msgbox "下载失败，请检查网络连接或稍后重试！" 8 25
-        exit
+    # 如果下载文件不存在或大小为 0，则报错并退出脚本
+    if [ ! -e "/usr/local/bin/d" ] || [ $(stat -c %s /usr/local/bin/d) -eq 0 ]; then
+        echo "下载文件失败或文件大小为 0"
+        exit 1
     fi
     chmod +x /usr/local/bin/d
-    d
-else
-    # 版本最新，提示用户
-    clear
-    echo -e "\033[32m脚本校验成功\033[0m"
 fi
 
 # 定义颜色变量
