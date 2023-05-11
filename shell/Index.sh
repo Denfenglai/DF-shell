@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.1.18
+ver=0.2.0
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -16,6 +16,7 @@ if [ "$version" != "$ver" ]; then
         exit 1
     fi
     chmod +x /usr/local/bin/d
+    d
 fi
 
 # 定义颜色变量
@@ -39,26 +40,24 @@ Yz=$(head -n 1 "${HOME}/.Yunzai")
 while true
 do
 sese=$(whiptail \
---title "(⑅˃◡˂⑅)" \
+--title "DF" \
 --menu "${ver}
 当前路径: $Yz" \
 20 40 9 \
-"1" "管理Yunzai-Bot" \
+"1" "Bot管理" \
 "2" "安装管理" \
-"3" "管理Yunzai插件" \
+"3" "插件管理" \
 "4" "报错修复" \
 "5" "其他功能" \
-"6" "帮助" \
-"7" "更新脚本" \
-"8" "修改脚本路径" \
+"6" "作者信息" \
+"7" "修改路径" \
 "0" "退出" \
 3>&1 1>&2 2>&3)
 
 feedback=$?
 if [ $feedback = 0 ];then
   #调用管理脚本
-  if [[ ${sese} = 1 ]]
-   then
+  if [[ ${sese} = 1 ]];then
    clear
 if [ -d "$Yz" ];then
        admin=$(whiptail \
@@ -171,7 +170,7 @@ fi
                d
            fi
     else
-           whiptail --title "没有找到Yunzai-Botʕ•ᴥ•ʔ……" --msgbox "
+           whiptail --title "ʕ•ᴥ•ʔ……" --msgbox "
            笨比，你都没有安装云崽，快去安装吧!
            " 10 43
     fi
@@ -238,24 +237,47 @@ fi
     fi
 
     #调用卸载脚本
-    if [[ ${cha} = 2 ]]
-    then
+    if [[ ${cha} = 2 ]];then
         cd $Yz
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/rm.sh)
     break
     fi
-   fi
+fi
 
   #调用修复脚本
-  if [[ ${sese} = 4 ]]
-    then
+  if [[ ${sese} = 4 ]];then
     clear
     echo -e "\e[1;32m正在打开修复菜单\e[0m"
     if [ -d "$Yz" ];then
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Bc.sh)
+    bc=$(whiptail \
+       --title "报错修复" \
+       --menu "${ver}
+当前路径:$Yz" \
+       17 40 10 \
+       "1" "重装云崽依赖" \
+       "2" "打开puppeteer chromium修复菜单"
+       "3" "打开登录错误码修复菜单"
+       3>&1 1>&2 2>&3 )
+      
+      if [[ ${bc} = 1 ]];then
+      rm -rf node_modules
+        pnpm cache clean --force
+        pnpm install
+        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        fi
+        
+        if [[ ${bc} = 2 ]];then
+        clear
+        echo -e "\e[1;32m正在打开Chromium修复菜单\e[0m"
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
+        fi
+        
+        if [[ ${bc} = 3 ]];then
+        clear
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
      else
      whiptail --title "哦呀？" --msgbox "
-     笨比，你都没有安装云崽怎么修复啊
+     请检查你是否正确安装云崽并设置脚本路径
        " 10 43
       fi
 fi
@@ -273,7 +295,7 @@ fi
        "1" "安装ffmpeg" \
        "2" "安装Python 3.9.15和Poetry" \
        "3" "搭载喵喵面板图" \
-       "4" "搭载喵喵涩涩面板图" \
+       "4" "搭载涩涩面板图" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
 #安装ffmpeg
@@ -311,63 +333,9 @@ https://gitee.com/Wind-is-so-strong/yz
     " 17 40 7
   fi
 
-  if [[ ${sese} = 7 ]]; then
-    # 如果环境不存在，则下载等风来脚本
-    if [ ! -f "/usr/local/bin/d" ]; then
-    clear
-        wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1
-        # 显示下载进度条
-        {
-            for ((i = 0 ; i <= 100 ; i+=1)); do
-                sleep 0.01s
-                echo $i
-            done
-        } | whiptail --gauge "检测到新版本 正在更新" 6 60 0
-        if ! [ -e "/usr/local/bin/d" ]; then
-            # 下载失败，提示用户并退出
-            whiptail --title "等风来" --msgbox
-            "安装失败 请检查网络"
-            8 25
-            exit
-        fi
-        chmod +x /usr/local/bin/d
-        rm wget.log
-        d
-    fi
-
-    # 检查脚本版本是否最新，如果不是则下载最新版本
-    version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
-    clear
-    if [ "$version" != "$ver" ]; then
-        rm -rf /usr/local/bin/d
-        wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
-        # 显示下载进度条
-        {
-            for ((i = 0 ; i <= 100 ; i+=1)); do
-                sleep 0.01s
-                echo $i
-            done
-        } | whiptail --gauge "有新版本辣 正在更新！" 6 60 0
-        if ! [ -e "/usr/local/bin/d" ]; then
-            # 下载失败，提示用户并退出
-            whiptail --title "❛‿˂̵✧" --msgbox \
-            "呜呜 被玩坏惹 肯定是网络的问题！" \
-            8 25
-            exit
-        fi
-        chmod +x /usr/local/bin/d
-        d
-    else
-        # 版本最新，提示用户
-        clear
-        whiptail --title "等风来" --msgbox \
-        "主人♡ 人家已经是最新了" \
-        8 25
-    fi
-fi
 
 #自定义路径
-if [[ ${sese} -eq 8 ]]; then
+if [[ ${sese} -eq 7 ]]; then
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yz.sh)
 break
 fi

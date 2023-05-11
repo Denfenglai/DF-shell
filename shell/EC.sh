@@ -89,7 +89,7 @@ if [ -d $Yz/data/icqq ]; then
 else
    rm -rf data/device.json
 fi
-#笨比Xx居然不自己cd！不过也好，这样适配还多一些
+#笨比Xx居然不自己cd！
 cd $Yz
 bash <(curl -sL https://gitee.com/haanxuan/version/raw/master/version.sh)
     break
