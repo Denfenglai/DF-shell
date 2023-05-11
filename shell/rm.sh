@@ -11,7 +11,7 @@ fi
 #定义云崽路径
 Yz=$(head -n 1 "${HOME}/.Yunzai")
 
-cd ~/$Yz
+cd $Yz
 
 # 清屏
 clear
