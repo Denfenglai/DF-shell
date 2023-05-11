@@ -4,7 +4,7 @@ ver=0.1.18
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
-version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng.sh)
+version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Deng)
 clear
 if [ "$version" != "$ver" ]; then
     rm -rf /usr/local/bin/d
