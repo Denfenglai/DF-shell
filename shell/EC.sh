@@ -62,7 +62,7 @@ fi
         echo -n "ICQQ@0.";read version
         if [[ "$version" == "n" ]]; then
             exit 0
-        elif [[ "$version" =~ ^[0-3]\.[0-9]$ ]]; then
+        elif [[ "$version" =~ ^[0-3]\.[0-10]$ ]]; then
             cd $Yz
             pnpm i icqq@0.$version -w
             echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""
