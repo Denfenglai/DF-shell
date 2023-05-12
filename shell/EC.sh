@@ -62,10 +62,10 @@ fi
         echo -n "ICQQ@0.";read version
         if [[ "$version" == "n" ]]; then
             exit 0
-        elif [[ "$version" =~ ^[0-3]\.[0-37]$ ]]; then
+        elif [[ "$version" =~ ^[0-3]\.[0-9]$ ]]; then
             cd $Yz
             pnpm i icqq@0.$version -w
-            echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+            echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""
         exit
         else
             echo -e "$R输入的格式不正确，请重新输入$N"
