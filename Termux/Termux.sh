@@ -19,13 +19,9 @@ cd ~/Termux-Linux/Ubuntu
 clear
 
 #检测是否有大聪明
-if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
-:
-else
-    echo -e "\e[1;36m师傅 你是干什么工作的？\e[0m"
-    echo -e "\e[1;31m这不是Termux呀\e[0m"
-    echo -e "\e[1;33mTermux才需要装Ubuntu\e[0m"
-    echo -e "\e[1;32m你有服务器直接安装启动脚本就可以了啊\e[0m"
+if [[ $(lsb_release -si) != "Ubuntu" ]]; then
+echo -e "\e[1;36m师傅，您好像没有在Ubuntu环境下吧\e[0m"
+echo -e "\e[1;31m这个脚本只能在Ubuntu中运行。\e[0m"
 exit
 fi
 
