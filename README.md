@@ -1,4 +1,4 @@
-# [DF](http://dengfenglai.cloud/)
+# align="center">[DF](http://dengfenglai.cloud/)
 <h6 align="center">等风来的小窝:295204145</h6>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr>
