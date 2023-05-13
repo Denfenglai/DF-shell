@@ -9,7 +9,7 @@
 
 一键部署 管理 配置 Yunzai-Bot]
 
----
+</div>
 
 ## 一.快速上手💡<br>
 - 在使用前请确保你有正确使用[搜索引擎](baidu.com)的技能
@@ -61,7 +61,7 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 ## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
 >建议重装Ubuntu 22.04
 >推荐使用服务器！更稳定！更兼容！
-服务器推荐
+- 服务器推荐
 - [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
 - [腾讯云服务器](https://cloud.tencent.com/act/pro/seckill_season?fromSource=gwzcw.7285964.728964.7285964&utm_medium=cpc&utm_id=gwzcw.7285964.7285964.7285964)
 - [阿里云免费试用三个月](https://free.aliyun.com/?utm_content=se_1013927383)
