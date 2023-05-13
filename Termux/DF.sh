@@ -3,7 +3,7 @@
 if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
 echo -e "\e[1;32m已安装！为您启动Ubuntu\e[0m"
 echo "bash Tip.sh" >> /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/.bashrc
-curl -o /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/Tip.sh https://gitee.com/haanxuan/yzai-pd/raw/master/Tip.sh
+curl -o /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/Tip.sh https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Tip.sh
 echo 正在启动Ubuntu
 cd ~/Termux-Linux/Ubuntu
 ./start-ubuntu.sh
