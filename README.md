@@ -1,4 +1,5 @@
-<h1 align="center">Dengfenglai-shell</h1>
+<h1 align="center">[DF](http://dengfenglai.cloud/)</h1>
+<h3 align="center">等风来的小窝:295204145</h3>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr>
 <div style="text-align: center;">
@@ -7,36 +8,12 @@
 
 ---
 
-## 一.[Ubuntu](https://www.baidu.com/s?wd=ubuntu%E6%98%AF%E4%BB%80%E4%B9%88)系统直接安装脚本<br>
+## 一.Ubuntu或Termux命令行直接启动<br>
 
->如果您是服务器或者自备了`ubuntu` 请直接使用下面的命令<br>
-
-```
-apt update && apt install curl -y && bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
-```
-
-<li>首次启动脚本似乎会自动关闭，再执行一遍就好了喵
-
-<hr>
-
-## 二、手机[Termux](https://www.baidu.com/s?wd=termux%E6%98%AF%E4%BB%80%E4%B9%88)安装
-
->[☞Termux下载地址](https://github.com/termux/termux-app/releases)<br>
->选择下载`arm64`版 然后执行下面命令
-
-```
-pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
-```
-
-<hr>
-
-## 三、电脑Windows等其他系统请使用 [TRSS.me](http://trss.me)
->支持多平台、多系统以及多Bot搭建和管理<br>
->一律[trss.me](http://trss.me)
-<hr>
-
+- [B站教程](https://b23.tv/2bkII8R)
 <details>
   <summary>脚本快捷命令</summary>
+
 
   #### 快捷命令
 | 指令 | 说明              |
@@ -70,6 +47,39 @@ pkg update && pkg install -y curl && bash <(curl -sL https://gitee.com/Wind-is-s
 
 
 <hr/>
+
+```
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
+```
+
+<li>首次启动脚本似乎会自动关闭，再执行一遍就好了喵
+
+<hr>
+
+## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
+- 建议重装Ubuntu 22.04
+>推荐使用服务器！更稳定！更兼容！
+<details>
+  <summary>服务器推荐</summary>
+- [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
+- [腾讯云服务器](https://cloud.tencent.com/act/pro/seckill_season?fromSource=gwzcw.7285964.728964.7285964&utm_medium=cpc&utm_id=gwzcw.7285964.7285964.7285964)
+- [阿里云免费试用三个月](https://free.aliyun.com/?utm_content=se_1013927383)
+  </details>
+<hr>
+
+### 三、以下脚本可以独立使用
+
+```
+#puppeteer chromium修复
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
+```
+<hr>
+```
+#登录错误码修复
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+```
+---
+
 
 #### 作者列表
 | 作者 | QQ |
