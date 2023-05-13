@@ -1,25 +1,16 @@
 #!/bin/bash
 
-if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
-echo -e "\e[1;32m已安装！为您启动Ubuntu\e[0m"
-echo "bash Tip.sh" >> /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/.bashrc
-curl -o /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/Tip.sh https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Tip.sh
-echo 正在启动Ubuntu
-cd ~/Termux-Linux/Ubuntu
-./start-ubuntu.sh
-clear
-echo -e "\e[1;36m  爱很重要，值得奔走相告。\e[0m"
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
-exit
+# 检测是否在 Termux 上运行
+if [ -n "$ANDROID_ROOT" ] && [ -x "$PREFIX/bin/apt" ]; then
+  echo "在风中相遇，在光中起舞..."
+  bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
+
+# 检测是否在 Ubuntu 上运行
+elif [ -f /etc/os-release ] && grep -q "^NAME=\"Ubuntu\"" /etc/os-release; then
+  echo "在风中相遇，在光中起舞..."
+  bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
+
+# 不支持的系统
 else
-if [ -e "/usr/local/bin/d" ]; then
-clear
-  d
-  exit
-else
-clear
-echo -e "\e[1;36m  在风中相遇，在光中起舞。\e[0m"
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
-exit
- fi
+  echo -e '\033[31m不支持的系统，请使用 Ubuntu 。\033[0m'
 fi
