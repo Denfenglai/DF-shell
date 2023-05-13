@@ -1,17 +1,20 @@
-<h1 align="center">DF</h1>
 
-<h6 align="center">快捷安装Yunzai-Bot</h6>
-<h6 align="center">等风来的小窝:295204145  官网:dengfenglai.cloud</h6>
-<hr>
-<div style="text-align: center;">
-  <img src="图片/kakuya.png" alt="辉夜" width="400" style="margin-top: 20px;">
-</div>
+<p align="center">
+  <a href="http://dengfenglai.cloud/"><img src="http://dengfenglai.cloud/Herta.png" width="45%" /></a>
+</p>
+
+<div align="center">
+
+# DF-Shell
+
+一键部署 管理 配置 Yunzai-Bot]
 
 ---
 
-## 一.Ubuntu或Termux命令行直接启动<br>
-
-- [B站教程](https://b23.tv/2bkII8R)
+## 一.快速上手💡<br>
+- 在使用前请确保你有正确使用[搜索引擎](baidu.com)的技能
+- [安卓所需的软件](https://pan.baidu.com/s/1s4oWDWzzdP_ow5z6MJANIw?pwd=99xs)
+- 使用请看[B站教程](https://b23.tv/2bkII8R)
 <details>
   <summary>脚本快捷命令</summary>
 
@@ -49,16 +52,14 @@
 
 <hr/>
 
+### 在Ubuntu或Termux终端执行
 ```
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 ```
 
-<li>首次启动脚本似乎会自动关闭，再执行一遍就好了喵
-
-<hr>
 
 ## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
-- 建议重装Ubuntu 22.04
+>建议重装Ubuntu 22.04
 >推荐使用服务器！更稳定！更兼容！
 服务器推荐
 - [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
