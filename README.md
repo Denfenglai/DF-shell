@@ -1,6 +1,6 @@
 
 <p align="center">
-  <a href="http://dengfenglai.cloud/"><img src="http://dengfenglai.cloud/Herta.png" width="45%" /></a>
+  <a href="http://dengfenglai.cloud/"><img src="https://dengfenglai.netlify.app/Herta.png" width="45%" /></a>
 </p>
 
 <div align="center">
