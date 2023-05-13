@@ -1,5 +1,5 @@
-<h1 align="center">DF</h1>
-<h3 align="center">等风来的小窝:295204145</h3>
+# [DF](http://dengfenglai.cloud/)
+<h6 align="center">等风来的小窝:295204145</h6>
 <h6 align="center">快捷安装Yunzai-Bot</h6>
 <hr>
 <div style="text-align: center;">
@@ -59,13 +59,11 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 ## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
 - 建议重装Ubuntu 22.04
 >推荐使用服务器！更稳定！更兼容！
-<details>
-  <summary>服务器推荐</summary>
+服务器推荐
 - [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
 - [腾讯云服务器](https://cloud.tencent.com/act/pro/seckill_season?fromSource=gwzcw.7285964.728964.7285964&utm_medium=cpc&utm_id=gwzcw.7285964.7285964.7285964)
 - [阿里云免费试用三个月](https://free.aliyun.com/?utm_content=se_1013927383)
-  </details>
-<hr>
+  
 
 ### 三、以下脚本可以独立使用
 
