@@ -1,13 +1,13 @@
 
 <p align="center">
-  <a href="http://dengfenglai.cloud/"><img src="https://dengfenglai.netlify.app/Herta.png" width="45%" /></a>
+  <a href="https://dengfenglai.netlify.app/"><img src="https://dengfenglai.netlify.app/Herta.png" width="45%" /></a>
 </p>
 
 <div align="center">
 
 # DF-Shell
 
-一键部署 管理 配置 Yunzai-Bot]
+一键部署 管理 配置Yunzai-Bot
 
 </div>
 
@@ -59,9 +59,9 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 
 
 ## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
->建议重装Ubuntu 22.04
->推荐使用服务器！更稳定！更兼容！
-- 服务器推荐
+>建议重装Ubuntu 22.04<br>
+>推荐使用服务器！更稳定！更兼容！<br>
+- 服务器推荐<br>
 - [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
 - [腾讯云服务器](https://cloud.tencent.com/act/pro/seckill_season?fromSource=gwzcw.7285964.728964.7285964&utm_medium=cpc&utm_id=gwzcw.7285964.7285964.7285964)
 - [阿里云免费试用三个月](https://free.aliyun.com/?utm_content=se_1013927383)
@@ -73,7 +73,7 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 #puppeteer chromium修复
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
 ```
-<hr>
+
 ```
 #登录错误码修复
 bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
@@ -82,9 +82,9 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
 
 
 #### 作者列表
-| 作者 | QQ |
-| --- | --- |
-|等风来|3139373986|
+| 作者 | QQ |QQ群组|
+| --- | --- | --- |
+|等风来|3139373986|295204145|
 
 <hr/>
 
