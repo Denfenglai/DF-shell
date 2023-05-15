@@ -210,5 +210,6 @@ fi
         fi
         echo -en "\033[32m 安装完成 回车开始登录\033[0m";read -p ""
         cd ~/Yunzai-Bot
+        redis-server --daemonize yes
         node app
     

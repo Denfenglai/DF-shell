@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.2.4
+ver=0.2.5
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -79,11 +79,11 @@ if [ -d "$Yz" ];then
        --title "⚆_⚆？" \
        --menu "${ver}" \
        17 40 10 \
-       "1" "启动Yunzai-Bot" \
-       "2" "停止Yunzai-Bot" \
-       "3" "后台启动Yunzai-Bot" \
-       "4" "查看后台Yunzai-Bot日志" \
-       "5" "重置Yunzai-Bot账号" \
+       "1" "启动Yunzai" \
+       "2" "停止Yunzai" \
+       "3" "后台启动Yunzai" \
+       "4" "查看后台Yunzai日志" \
+       "5" "重置Yunzai账号" \
        "6" "修改登录协议" \
        "7" "修改主人QQ号୧꒰•̀ᴗ•́꒱୨" \
        "0" "返回" \
@@ -134,6 +134,7 @@ if [ -d "$Yz" ];then
   else
        rm -rf data/device.json
 fi
+          redis-server --daemonize yes
            pnpm run login
            break
        fi
