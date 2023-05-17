@@ -17,6 +17,9 @@ else
     printf "校验成功\n"
 fi
 
+# 清屏
+clear
+
 YUNZAI_PATH=$(cat "$HOME/.Yunzai")
 
 # 获取所有插件目录
@@ -37,8 +40,6 @@ if [ ${#plugin_dirs[@]} -eq 0 ]; then
     exit 1
 fi
 
-# 清屏
-clear
 
 printf "\n请输入你要删除的目录的编号，多个请用空格隔开: "
 read -r chosen_indexes
