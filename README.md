@@ -12,7 +12,7 @@
 </div>
 
 ## 一.快速上手💡<br>
-- 在使用前请确保你有正确使用[搜索引擎](baidu.com)的技能
+- 在使用前请确保你有正确使用[搜索引擎](http://baidu.com)的技能
 - [安卓所需的软件](https://pan.baidu.com/s/1s4oWDWzzdP_ow5z6MJANIw?pwd=99xs)
 - 使用请看[B站教程](https://b23.tv/2bkII8R)
 <details>
