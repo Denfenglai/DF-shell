@@ -37,9 +37,6 @@ if [ ${#plugin_dirs[@]} -eq 0 ]; then
     exit 1
 fi
 
-# 清屏
-clear
-
 printf "\n请输入你要删除的目录的编号，多个请用空格隔开: "
 read -r chosen_indexes
 chosen_indexes=($chosen_indexes)
