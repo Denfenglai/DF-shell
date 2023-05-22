@@ -3,23 +3,16 @@
 # 清屏
 clear
 
-#初始化加载
-if [ -f "$HOME/.Yunzai" ]; then
-  echo -e "\033[32m校验成功\033[0m"
-else
-  echo -e "\033[33m初始化文件中\033[0m"
-  sleep 0.3
-  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+if [ ! -d "plugins" ]; then
+  echo -e "\033[31m请在 Yunzai 根目录下执行该脚本\033[0m"
+  exit 1
 fi
-#定义云崽路径
-Yz=$(head -n 1 "${HOME}/.Yunzai")
 
 # 添加菜单选项
 echo "================================"
 echo "   Chromium puppeteer修复            "
 echo "================================"
-echo "当前路径:$Yz
-0.  安装中文字体
+echo "0.  安装中文字体
 1.  Chromium降级"
 echo "2.  使用install.js"
 echo "3.  使用apt包安装"
@@ -56,7 +49,6 @@ case $choice in
            
         1)
         #强制降级
-        cd $Yz
         npm stop
         pnpm run stop
         pnpm add puppeteer@13.7.0 -w --force
@@ -64,7 +56,7 @@ case $choice in
         ;;
     2)
         #完全卸载旧版Chromium
-        cd $Yz
+        
         npm stop
         pnpm uninstall puppeteer
         pnpm install puppeteer@19.7.3 -w
@@ -73,6 +65,7 @@ case $choice in
         echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
         ;;
     3)
+        
         echo "使用apt包安装Chromium"
         #卸载
         npm stop
@@ -83,6 +76,11 @@ case $choice in
         exit 0
         ;;
     4)
+
+    if [ "$(uname -s)" != "Linux" ] || [ "$(lsb_release -is)" != "Ubuntu" ]; then
+    echo "此脚本只能在 Ubuntu 系统上运行。"
+    exit 1
+    fi
         #简单抄白狐脚本，诶嘿
         Ubuntuv=$(lsb_release -r | awk '{print $2}')
            architecture=$(uname -m)
@@ -141,8 +139,11 @@ case $choice in
             fi
         ;;
     5)
+   if [ "$(uname -s)" != "Linux" ] || [ "$(lsb_release -is)" != "Ubuntu" ]; then
+   echo "此脚本只能在 Ubuntu 系统上运行。"
+   exit 1
+  fi
         echo "套用白狐佬的脚本，适配了Ubuntu22.04哦~"
-        cd $Yz
         npm stop
         bash <(curl https://gitee.com/baihu433/chromium/raw/master/chromium.sh)
        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
@@ -155,6 +156,7 @@ case $choice in
             rm -rf chromium
             git clone https://gitee.com/Ganyu256/chromium.git
             cd chromium
+            echo "启动修复"
             bash install.sh
             cd
             rm -rf chromium

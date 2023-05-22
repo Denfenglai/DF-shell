@@ -7,31 +7,21 @@ R="\e[31m"
 Q="\e[36m"
 L="\e[34m"
 H="\e[33m"
-#初始化加载
-if [ -f "$HOME/.Yunzai" ]; then
-  echo -e "\033[32m校验成功\033[0m"
-else
-  echo -e "\033[33m初始化文件中\033[0m"
-  sleep 0.3
-  echo "~/Yunzai-Bot" > "$HOME/.Yunzai"
+
+if [ ! -d "plugins" ]; then
+  echo -e "\033[31m请在 Yunzai 根目录下执行该脚本\033[0m"
+  exit 1
 fi
-#定义云崽路径
-Yz=$(head -n 1 "${HOME}/.Yunzai")
-#清屏
-clear
+
 
 echo "           错误码  "
-echo "============================
-当前路径:$Yz"
+echo "============================"
 echo "    1. 删除虚拟设备信息"
 echo "    2. 安装指定icqq版本"
 echo "    3. 错误码:45＆token失效循环"
 echo "    4. 错误码:237"
 echo "    5. 错误码:235"
 echo "    6. 错误码:238"
-echo "============================"
-echo "      输入【oicq】换乐鸟源"
-echo "      输入【icqq】换喵喵源"
 echo "============================"
 echo "    0. 退出"
 
@@ -40,8 +30,7 @@ read -p "请输入选项编号: " opt
 case $opt in
     #删
     1)
-        cd $Yz
-        if [ -d $Yz/data/icqq ]; then
+        if [ -d data/icqq ]; then
    rm -rf data/icqq
 else
    rm -rf data/device.json
@@ -62,10 +51,9 @@ fi
         echo -n "ICQQ@0.";read version
         if [[ "$version" == "n" ]]; then
             exit 0
-        elif [[ "$version" =~ ^[0-3]\.[0-9]$ ]]; then
-            cd $Yz
-            pnpm i icqq@0.$version -w
-            echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""
+        elif [[ "$version" =~ ^0\.[1-9][0-9]*$ ]]; then
+        pnpm i icqq@$version -w
+        echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""
         exit
         else
             echo -e "$R输入的格式不正确，请重新输入$N"
@@ -83,14 +71,12 @@ echo -e "$Q 赞美寒暄~$N"
 echo -e "$Y 5秒后开始安装$N"
 sleep 5
 #先提前删一遍
-cd $Yz
-if [ -d $Yz/data/icqq ]; then
+    if [ -d data/icqq ]; then
    rm -rf data/icqq
-else
+    else
    rm -rf data/device.json
 fi
 #笨比Xx居然不自己cd！
-cd $Yz
 bash <(curl -sL https://gitee.com/haanxuan/version/raw/master/version.sh)
     break
     ;;
@@ -108,12 +94,11 @@ bash <(curl -sL https://gitee.com/haanxuan/version/raw/master/version.sh)
     5)
         echo -e "$L235不知道什么原因$N"
         echo -e "$G删了虚拟设备信息就可以了$N"
-        cd $Yz
-if [ -d $Yz/data/icqq ]; then
-   rm -rf data/icqq
-else
-   rm -rf data/device.json
-fi
+        if [ -d data/icqq ]; then
+        rm -rf data/icqq
+    else
+        rm -rf data/device.json
+    fi
         echo -e "$G我已经帮你删辣，下回自己删就可以了$N"
         echo "删除教程:"
         echo "云崽: rm -rf data/device.json"

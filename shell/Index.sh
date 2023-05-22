@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.2.5
+ver=0.2.6
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -289,12 +289,14 @@ fi
         
         if [[ ${bc} = 2 ]];then
         clear
+        cd $Yz
         echo -e "\e[1;32m正在打开Chromium修复菜单\e[0m"
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
         fi
         
         if [[ ${bc} = 3 ]];then
         clear
+        cd $Yz
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
         fi
      else
