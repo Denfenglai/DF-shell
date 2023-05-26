@@ -52,7 +52,7 @@ fi
         if [[ "$version" == "n" ]]; then
             exit 0
         elif [[ "$version" =~ ^[0-3]\.[0-9][0-9]*$ ]]; then
-        pnpm i icqq0.@$version -w
+        pnpm i icqq@0.$version -w
         echo -en "\033[32m 安装完成 回车返回\033[0m";read -p ""
         exit
         else
