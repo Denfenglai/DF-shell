@@ -5,7 +5,7 @@
 
 <div align="center">
 
-# DF-Shell
+# [DF-Shell](http://dengfenglai.cloud)
 
 一键部署 管理 配置Yunzai-Bot
 
@@ -53,9 +53,10 @@
 <hr/>
 
 ### 在Ubuntu或Termux终端执行
+```bash
+bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 ```
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
-```
+- [常见问题](https://dengfenglai.cloud/QA/)
 
 
 ## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
@@ -71,12 +72,12 @@ bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 
 ```
 #puppeteer chromium修复
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
+bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
 ```
 
 ```
 #登录错误码修复
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
 ```
 ---
 
