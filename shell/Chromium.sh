@@ -3,7 +3,7 @@
 # 清屏
 clear
 
-if [ ! -d "plugins" ]; then
+if [ ! -d "lib/bot.js" ]; then
   echo -e "\033[31m请在 Yunzai 根目录下执行该脚本\033[0m"
   exit 1
 fi
@@ -17,15 +17,14 @@ echo "0.  安装中文字体
 echo "2.  使用install.js"
 echo "3.  使用apt包安装"
 echo "4.  调用甘雨大佬的修复"
-echo "5.  调用白佬的脚本
-6.  XDM的修复"
+echo "5.  调用白狐的脚本"
 echo "================================"
-echo "   不清楚的话从1~6依次执行"
-echo "         直到能用为止"
-echo "  什么？都用过了还不行？那就…诶嘿~"
+echo "     不清楚的话从1~6依次执行"
+echo "     官网:dengfenglai.cloud"
+echo "  		Ps:等风来"
 echo "================================"
 # 提示用户选择
-echo "请选择一个选项 [0-6]: "
+echo "请选择一个选项 [0-5]: "
 
 # 读取用户输入
 read choice
@@ -34,17 +33,23 @@ read choice
 case $choice in
   
         0)
+        #只支持ubuntu啊
+        if [ "$(uname -s)" != "Linux" ] || [ "$(lsb_release -is)" != "Ubuntu" ]; then
+        echo -e "\033[31m此脚本只能在 Ubuntu 系统上运行。\033[0m"
+        exit 1
+        fi
+    
         #安装浏览器中文字体
         echo "正在使用apt安装中文字体"
         apt install -y fonts-wqy-microhei 
         echo "字体安装成功！"
         # 清屏
-        clear
         sleep 2
+        clear
         #蜜汁依赖
         echo "使用apt安装依赖"
         apt-get install ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils libxkbcommon0 -y
-        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        echo -n "修复完成 回车返回";read -p ""
            ;;
            
         1)
@@ -52,7 +57,7 @@ case $choice in
         npm stop
         pnpm run stop
         pnpm add puppeteer@13.7.0 -w --force
-        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        echo -en "修复完成 回车返回";read -p ""
         ;;
     2)
         #完全卸载旧版Chromium
@@ -62,7 +67,7 @@ case $choice in
         pnpm install puppeteer@19.7.3 -w
         echo "开始使用install.js安装"
         node ./node_modules/puppeteer/install.js
-        echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        echo -en "修复完成 回车返回";read -p ""
         ;;
     3)
         
@@ -72,13 +77,13 @@ case $choice in
         apt remove chromium -y
         #安装
         apt-get install chromium-browser
-        echo -e "\033[32m 修复完成 \033[0m"
+        echo -e "修复完成"
         exit 0
         ;;
     4)
 
     if [ "$(uname -s)" != "Linux" ] || [ "$(lsb_release -is)" != "Ubuntu" ]; then
-    echo "此脚本只能在 Ubuntu 系统上运行。"
+    echo "\033[31m此脚本只能在 Ubuntu 系统上运行。\033[0m"
     exit 1
     fi
         #简单抄白狐脚本，诶嘿
@@ -146,7 +151,7 @@ case $choice in
         echo "套用白狐佬的脚本，适配了Ubuntu22.04哦~"
         npm stop
         bash <(curl https://gitee.com/baihu433/chromium/raw/master/chromium.sh)
-       echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+       echo -en "修复完成 回车返回";read -p ""
        ;;
 
 
