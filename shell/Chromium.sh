@@ -3,7 +3,7 @@
 # 清屏
 clear
 
-if [ ! -d "lib/bot.js" ]; then
+if [ ! -d "app.js" ]; then
   echo -e "\033[31m请在 Yunzai 根目录下执行该脚本\033[0m"
   exit 1
 fi
