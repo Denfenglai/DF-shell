@@ -99,7 +99,7 @@ if [ $feedback = 0 ];then
             echo -e "\e[32m开始载入角色面板图\e[0m"
             echo -e "\e[34m过程不会有进度提示\e[0m"
             echo -e "\e[32m请耐心等待\e[0m"
-            mv "$Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character/*" "$Yz/plugins/miao-plugin/resources/profile/normal-character/"
+            mv $Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character/* $Yz/plugins/miao-plugin/resources/profile/normal-character/
             echo -e "\e[32m已载入角色面板图\e[0m"
 
             echo -e "\e[32m正在修改喵喵设置禁止获取原图……\e[0m"
