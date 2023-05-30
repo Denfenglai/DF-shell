@@ -37,7 +37,7 @@ clear
     echo -e ${Error} $Yz/plugins/miao-plugin/resources/profile不存在
     echo -e ${Tip} 请检查是否安装了【喵喵插件】
     echo -e ${Info} 如果已经安装成功运行
-    echo -e ${Info} 请加入交流群453694434询问
+    echo -e ${Info} 请加入交流群询问
     exit
 fi
 
@@ -137,7 +137,7 @@ if [ $feedback = 0 ];then
     main
   elif [[ ${sese} = 2 ]];then
 clear    
-cd $Yz/plugins/miao-plugin/resources/profile/miao-PAN
+cd $Yz/plugins/miao-plugin/resources/profile/normal-character
 echo -e ${Info} 开始拉取面板图资源
 git fetch --all
 git reset --hard origin/master
