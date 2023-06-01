@@ -747,7 +747,7 @@ fi
     if [ -d "$Yz/plugins/cunyx-plugin" ]; then
         echo -e "\e[1;32mcunyx-plugin插件文件已存在 需要重装请先删除.\e[0m"
     else
-        echo "\e[32m开始执行寸幼萱插件安装命令\e[0m"
+        echo -e "\e[32m开始执行寸幼萱插件安装命令\e[0m"
         git clone https://gitee.com/cunyx/cunyx-plugin.git ./plugins/cunyx-plugin/
         cd ./plugins/cunyx-plugin && mv def_config config
     if [ -d "$Yz/plugins/cunyx-plugin" ]; then
