@@ -87,7 +87,7 @@ echo -e "\e[1;32m 感谢使用 再会~\e[0m"
 echo -e "\e[1;31m唉？你这小孩  你被骗啦！\e[0m"
 echo -e "\e[1;33m不准偷懒喔！\e[0m"
 echo -e "\e[1;32m自己手动输入需要安装插件的对应编号吧~\e[0m"
-echo -e "\e[1;36m建议加入QQ交流群453694434让大家笑笑你 嘻嘻\e[0m"
+echo -e "\e[1;36m建议加入QQ交流群让大家笑笑你 嘻嘻\e[0m"
         ;;
 #———————————————————————————————————————————————————————————————        
         Vits|vits|VITS)
@@ -383,8 +383,10 @@ git clone --depth=1 https://gitee.com/Nwflower/auto-plugin.git ./plugins/auto-pl
 #———————————————————————————————————————————————————————————————        
         26)
         clear
-echo -e "\e[1;32m 千羽\e[0m"
-echo -e "\e[1;31m  离开了我们..\e[0m"
+        cd $Yz
+echo -e "\e[1;32m 开始执行千羽插件安装命令\e[0m"
+git clone --depth=1 https://gitee.com/think-first-sxs/qianyu-plugin.git ./plugins/qianyu-plugin/
+echo -e "\e[1;32m 千羽插件安装成功\e[0m"
 sleep 3
         ;;
 #———————————————————————————————————————————————————————————————        
