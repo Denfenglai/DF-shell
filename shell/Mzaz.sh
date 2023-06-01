@@ -339,7 +339,7 @@ if [ -e "/usr/bin/m" ]
            chmod 777 /usr/bin/m
            #后台
            echo echo 后台启动Miao-Yunzai > /usr/bin/mr
-           sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && clear && pnpm run start && echo -e "\e[1;32mMiao-Yunzai已在后台运行\e[0m"' /usr/bin/mr
+           sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && clear && pnpm run start && echo -e "Miao-Yunzai已在后台运行"' /usr/bin/mr
            chmod 777 /usr/bin/mr
            #日志
            echo echo 打开Miao-Yunzai日志 > /usr/bin/ml
