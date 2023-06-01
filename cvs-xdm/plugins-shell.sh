@@ -727,6 +727,7 @@ fi
         git clone https://gitee.com/sumght/impart-pro-plugin.git ./plugins/impart-pro-plugin/
         echo -e "\e[32m银趴插件安装成功\e[0m"
         fi
+        ;;
 #———————————————————————————————————————————————————————————————
         45)
         clear
@@ -738,6 +739,7 @@ fi
         git clone --depth=1 https://gitee.com/white-night-fox/wenan-plugin.git ./plugins/wenan-plugin/
         echo -e "文案插件安装成功"
         fi
+        ;;
 #———————————————————————————————————————————————————————————————
         46)
         clear
@@ -754,6 +756,7 @@ fi
         echo -e "\e[31m寸幼萱插件安装失败，请检查网络\e[0m"
     fi
     fi
+    ;;
 #———————————————————————————————————————————————————————————————
     esac
    done
