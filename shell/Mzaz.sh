@@ -331,8 +331,8 @@ if [ -e "/usr/bin/m" ]
            pushd $HOME 
            echo '正在将启动写入启动命令'
            #转到目录
-           sed -i '/alias mz/d' ~/.bashrc
-           echo "alias mz='cd /root/Miao-Yunzai'" >> ~/.bashrc,
+           echo 'cd /root/Yunzai-Bot && exec bash -i' >> /usr/local/bin/mz
+           chmod 777 /usr/bin/m
            #启动
            echo echo 正在启动Miao-Yunzai > /usr/bin/m
            sed -i -e '1a redis-server --daemonize yes && cd ~/Miao-Yunzai && npm stop && clear && node app' /usr/bin/m
