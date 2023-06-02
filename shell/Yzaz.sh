@@ -45,8 +45,8 @@ fi
         #安装pnpm
         if ! command -v pnpm &> /dev/null
 then
-    echo "pnpm 未安装"
-     echo -e "\033[34m 开始安装pnpm  \033[0m";
+        echo "pnpm 未安装"
+        echo -e "\033[34m 开始安装pnpm  \033[0m";
         npm config set registry http://registry.npm.taobao.org/
         npm install -g npm
         npm install -g pnpm
@@ -62,27 +62,27 @@ then
 else
     echo "pnpm 已安装"
 fi
-       # 检测是否安装了redis
-dpkg -l | grep redis
+    # 检测是否安装了redis
+    dpkg -l | grep redis
 
-# 如果没有安装，则安装redis数据库
-if [ $? -ne 0 ]; then
-clear
-# 安装redis
-echo -e ${Tip} 开始安装redis数据库
-apt-get install redis -y
-redis-server --daemonize yes
-# 判断是否安装成功
-if [ $? -eq 0 ]; then
-redis-server --daemonize yes
-echo -e ${Info} redis数据库 安装成功！
-echo -e ${OK}
-sleep 3
-else
-echo -e ${Error} redis安装失败
-echo -e ${Tip} 请重新运行脚本
-exit
- fi
+    # 如果没有安装，则安装redis数据库
+    if [ $? -ne 0 ]; then
+    clear
+    # 安装redis
+    echo -e ${Tip} 开始安装redis数据库
+    apt-get install redis -y
+    redis-server --daemonize yes
+    # 判断是否安装成功
+    if [ $? -eq 0 ]; then
+    redis-server --daemonize yes
+    echo -e ${Info} redis数据库 安装成功！
+    echo -e ${OK}
+    sleep 3
+    else
+    echo -e ${Error} redis安装失败
+    echo -e ${Tip} 请重新运行脚本
+    exit
+    fi
 fi
 
 clear

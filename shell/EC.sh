@@ -8,34 +8,38 @@ Q="\e[36m"
 L="\e[34m"
 H="\e[33m"
 
-if [ ! -d "plugins" ]; then
+if [ ! -d "lib" ]; then
   echo -e "\033[31m请在 Yunzai 根目录下执行该脚本\033[0m"
   exit 1
 fi
 
 
-echo "           错误码  "
-echo "============================"
-echo "    1. 删除虚拟设备信息"
-echo "    2. 安装指定icqq版本"
-echo "    3. 错误码:45＆token失效循环"
-echo "    4. 错误码:237"
-echo "    5. 错误码:235"
-echo "    6. 错误码:238"
-echo "============================"
-echo "    0. 退出"
+        echo "            错误码  "
+        echo "==============================="
+        echo "     1. 删除虚拟设备信息"
+        echo "     2. 安装指定icqq版本"
+        echo "     3. 错误码:45＆token失效循环"
+        echo "     4. 错误码:237"
+        echo "     5. 错误码:235"
+        echo "     6. 错误码:238"
+        echo "     0. 退出"
+        echo "==============================="
+echo -e "\e[33m    作者：\e[0m等风来"
+echo -e "\e[36m    项目主页:\e[0mdengfenglai.cloud"
+        echo "==============================="
+        
 
-while true; do
-read -p "请输入选项编号: " opt
-case $opt in
+        while true; do
+        read -p "请输入选项编号: " opt
+    case $opt in
     #删
     1)
         if [ -d data/icqq ]; then
-   rm -rf data/icqq
+        rm -rf data/icqq
 else
-   rm -rf data/device.json
+        rm -rf data/device.json
 fi
- echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
+        echo -n "修复完成 回车返回";read -p ""
         break
         ;;
         

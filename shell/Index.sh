@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.2.6
+ver=0.2.7
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -26,12 +26,15 @@ if [ "$version" != "$ver" ]; then
         else
             # 执行最新版本脚本
             d
+            exit 0
         fi
     fi
 else
     # 版本最新，提示用户
     clear
-    echo -e "\033[32m脚本校验成功\033[0m"
+    echo -e "\033[32m脚本载入成功\033[0m"
+    echo -e "\e[33m作者：\e[0m等风来\e[0m"
+    echo -e "\e[35m项目主页：\e[0mdengfenglai.cloud"
 fi
 
 # 定义颜色变量
@@ -56,6 +59,7 @@ while true
 do
 sese=$(whiptail \
 --title "DF" \
+--backtitle "主页dengfenglai.cloud" \
 --menu "${ver}
 当前路径: $Yz" \
 20 40 9 \
@@ -76,7 +80,7 @@ if [ $feedback = 0 ];then
    clear
 if [ -d "$Yz" ];then
        admin=$(whiptail \
-       --title "⚆_⚆？" \
+       --title "DF" \
        --menu "${ver}" \
        17 40 10 \
        "1" "启动Yunzai" \
@@ -115,34 +119,34 @@ if [ -d "$Yz" ];then
            fi
 
            #显示后台日志
-           if [[ ${admin} = 4 ]];then
-              clear
-              echo -e "$Q 正在打开Yunzai-BOT后台日志"
-              echo -e "$Q没有则是没有运行，请先后台运行再查看$N"
-              pushd $Yz
-              pnpm run log
-           break
-           fi
+        if [[ ${admin} = 4 ]];then
+            clear
+            echo -e "$Q 正在打开Yunzai-BOT后台日志"
+            echo -e "$Q没有则是没有运行，请先后台运行再查看$N"
+            pushd $Yz
+            pnpm run log
+            break
+        fi
 
-           #重置登录
-           if [[ ${admin} = 5 ]];then
-           pushd $Yz
-           npm stop
-    #删除虚拟设备信息
-        if [ -d data/icqq ]; then
-       rm -rf data/icqq
-  else
-       rm -rf data/device.json
-fi
-          redis-server --daemonize yes
-           pnpm run login
-           break
-       fi
+            #重置登录
+        if [[ ${admin} = 5 ]];then
+            pushd $Yz
+            npm stop
+            #删除虚拟设备信息
+            if [ -d data/icqq ]; then
+            rm -rf data/icqq
+        else
+            rm -rf data/device.json
+        fi
+            redis-server --daemonize yes
+            pnpm run login
+            break
+        fi
 
            if [[ ${admin} = 6 ]];then
            pushd $Yz
            equipment=$(whiptail \
-           --title "♡涩涩♡" \
+           --title "DF" \
            --menu "请选择登录设备" \
            17 35 7 \
            "1" "安卓手机" \

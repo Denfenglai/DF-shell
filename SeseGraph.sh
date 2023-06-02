@@ -148,7 +148,8 @@ echo -e ${OK}
 echo -e ${Info} 开始载入角色面板图
 echo -e ${Tip} 过程不会有进度提示
 echo -e ${Info} 请耐心等待
-cp -r $Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character/* $Yz/plugins/miao-plugin/resources/profile/normal-character/ && rm -rf $Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character
+cp -r $Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character/* $Yz/plugins/miao-plugin/resources/profile/normal-character/
+rm -rf $Yz/plugins/miao-plugin/resources/profile/Miao-Character/normal-character
 echo -e ${Info} 已载入角色面板图
 echo -e ${OK}
 fi
