@@ -23,7 +23,7 @@ elif [ -f /etc/os-release ] && grep -q "^NAME=\"Ubuntu\"" /etc/os-release; then
   bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/install.sh)
 
 # 检测是否在 CentOS 上运行
-elif [ -f /etc/os-release ] && grep -q "^NAME=\"CentOS\"" /etc/os-release; then
+elif [ -f /etc/centos-release ]; then
   clear
   echo -e "\e[32m脚本载入成功！\e[0m "
   echo -e "\e[34m检测为 CentOS "
