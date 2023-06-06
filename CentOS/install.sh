@@ -14,23 +14,23 @@ fi
 
 if ! [ -x "$(command -v curl)" ];then
     echo -e "\033[36m检测到未安装curl 开始安装 \033[0m";
-    yum update
+    yum update -y
     yum install curl -y
 fi
 if ! [ -x "$(command -v wget)" ];then
     echo -e "\033[36m检测到未安装wget 开始安装 \033[0m";
-    yum update
+    yum update -y
     yum install wget -y
 fi
 if ! [ -x "$(command -v git)" ];then
     echo -e "\033[36m检测到未安装git 开始安装 \033[0m";
-    yum update
+    yum update -y
     yum install git -y
 fi
 
 if ! [ -x "$(command -v whiptail)" ]; then
     echo -e "\033[36m 检测到未安装 whiptail，开始安装 \033[0m"
-    yum update
+    yum update -y
     yum install newt -y
 fi
 

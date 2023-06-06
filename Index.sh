@@ -58,7 +58,7 @@ while true
 do
 sese=$(whiptail \
 --title "DF" \
---backtitle "脚本纯免费使用	主页官网dengfenglai.cloud		作者:等风来	QQ群:295204145" \
+--backtitle "脚本纯免费使用 主页官网dengfenglai.cloud 作者:等风来" \
 --menu "${ver}
 当前路径: $Yz" \
 20 40 9 \
