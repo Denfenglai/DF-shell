@@ -216,20 +216,36 @@ if [ -d "$Yz" ];then
        whiptail --title "等风来" --msgbox "
        您已安装云崽 禁止套娃
        " 10 43
-     else
+    else
+    # 获取系统发行版本的信息
+    os=$(lsb_release -si)
+    # 判断系统类型并执行对应的命令
+    if [ "$os" = "Ubuntu" ]; then
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
     break
+    elif [ "$os" = "CentOS" ]; then
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+    break
+    fi
+
  fi
  fi
     #Miao-Yunzai
     if [[ ${install} = 2 ]]
     then
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Mzaz.sh)
+    # 获取系统发行版本的信息
+    os=$(lsb_release -si)
+    if [ "$os" = "Ubuntu" ]; then
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Mzaz.sh)
+    elif [ "$os" = "CentOS" ]; then
+        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Mzaz.sh)
+    fi
+
     fi
     #早苗BOT
     if [[ ${install} = 3 ]]
     then
-    bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
+        bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
     break
     fi
  fi
@@ -317,7 +333,7 @@ fi
        --title "⸜₍๑•⌔•๑₎⸝" \
        --menu "${ver}
 当前路径:$Yz
-功能等待完善，有需求可以加群295204145" \
+功能等待添加，欢迎反馈~" \
        17 35 6 \
        "1" "安装ffmpeg" \
        "2" "安装Python 3.9.15和Poetry" \
@@ -344,7 +360,7 @@ clear
     
     if [[ ${qt} = 4 ]];then
     clear
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/SeseGraph.sh)
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/SeseGraph.sh)
     fi
 fi
 
@@ -352,18 +368,18 @@ fi
    then
     #帮助菜单
     whiptail --title "帮助" --msgbox "
-项目地址:
-https://gitee.com/Wind-is-so-strong/yz
+项目主页:
+https://dengfenglai.cloud
 作者QQ:3139373986
-使用有任何问题或有脚本需求可以加群:
-295204145
+使用有任何问题或有功能需求可以加群:
+797434884
     " 17 40 7
   fi
 
 
 #自定义路径
 if [[ ${sese} -eq 7 ]]; then
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Yz.sh)
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yz.sh)
 break
 fi
 
