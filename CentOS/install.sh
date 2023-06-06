@@ -60,7 +60,7 @@ if ! [ -e "/usr/local/bin/d" ]; then
     d
 else
     rm -rf /usr/local/bin/d
-    wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh
+    wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/Index.sh
     (
         for ((i = 0; i <= 100; i += 1)); do
             sleep 0.01s
