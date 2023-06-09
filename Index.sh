@@ -217,15 +217,18 @@ if [ -d "$Yz" ];then
        您已安装云崽 禁止套娃
        " 10 43
     else
-    # 获取系统发行版本的信息
-    os=$(lsb_release -si)
-    # 判断系统类型并执行对应的命令
-    if [ "$os" = "Ubuntu" ]; then
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
-    break
-    elif [ "$os" = "CentOS" ]; then
+    if [ -f "/etc/redhat-release" ]; then
+# 如果是CentOS系统
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
-    break
+exit
+elif [ -f "/etc/lsb-release" ]; then
+# 如果是Ubuntu系统
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+exit
+else
+    echo "不支持当前系统"
+    exit
+fi
     fi
 
  fi
