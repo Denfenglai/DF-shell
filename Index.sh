@@ -237,14 +237,19 @@ fi
     if [[ ${install} = 2 ]]
     then
     # 获取系统发行版本的信息
-    os=$(lsb_release -si)
-    if [ "$os" = "Ubuntu" ]; then
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Mzaz.sh)
-    elif [ "$os" = "CentOS" ]; then
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Mzaz.sh)
-    fi
-
-    fi
+    if [ -f "/etc/redhat-release" ]; then
+# 如果是CentOS系统
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+exit
+elif [ -f "/etc/lsb-release" ]; then
+# 如果是Ubuntu系统
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+exit
+else
+    echo "不支持当前系统"
+    exit
+fi
+    
     #早苗BOT
     if [[ ${install} = 3 ]]
     then
