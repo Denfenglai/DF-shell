@@ -70,12 +70,12 @@ bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 
 ### 三、以下脚本可以独立使用
 
-```
+```bash
 #puppeteer chromium修复
 bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
 ```
 
-```
+```bash
 #登录错误码修复
 bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
 ```
