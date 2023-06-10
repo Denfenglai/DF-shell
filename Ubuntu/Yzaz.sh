@@ -107,7 +107,7 @@ echo -e "\e[33m3秒后重试\e[0m"
 sleep 3
   fi
 else
- ：
+ clear
 fi
 
 #阿里云轻量100%失败一次，那就再试试咯
