@@ -140,13 +140,7 @@ fi
        bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
        fi
         
-    #检查CPU架构
-    architecture=$(uname -m)
-    # 如果是ARM架构
-    if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
-    #修改依赖项
-    sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Yunzai-Bot/package.json
-    fi
+    
 
 
         # 克隆项目
@@ -165,6 +159,13 @@ fi
         #安装Yunzai依赖
         echo -e "\033[34m 安装依赖 \033[0m";
         cd ~/Yunzai-Bot
+        #检查CPU架构
+        architecture=$(uname -m)
+        # 如果是ARM架构
+        if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
+        #修改依赖项
+        sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Yunzai-Bot/package.json
+        fi
         pnpm install -P && pnpm install -P
         
         #蜜汁22.04
