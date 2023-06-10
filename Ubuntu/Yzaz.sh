@@ -144,8 +144,8 @@ fi
     architecture=$(uname -m)
     # 如果是ARM架构
     if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
-    #降级浏览器
-    sed -i 's/"puppeteer": "\^20\.2\.1"/"puppeteer": "\^13.7.0"/' /root/Yunzai-Bot/package.json
+    #修改依赖项
+    sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Yunzai-Bot/package.json
     fi
 
 
