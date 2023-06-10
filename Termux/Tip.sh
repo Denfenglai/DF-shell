@@ -21,4 +21,4 @@ apt install curl -y
 
 clear
 echo -e "\e[1;36m  少女祈祷中..\e[0m"
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/install.sh)
+bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/install.sh)
