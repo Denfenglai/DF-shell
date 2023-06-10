@@ -140,6 +140,15 @@ fi
        bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
        fi
         
+    #检查CPU架构
+    architecture=$(uname -m)
+    # 如果是ARM架构
+    if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
+    #降级浏览器
+    sed -i 's/"puppeteer": "\^20\.2\.1"/"puppeteer": "\^13.7.0"/' /root/Yunzai-Bot/package.json
+    fi
+
+
         # 克隆项目
         echo -e "\033[34m 正在克隆Yunzai-Bot \033[0m";
         pushd ~/
