@@ -133,7 +133,7 @@ echo -e "\e[33m请重新运行脚本\e[0m"
 exit 1
   fi
 else
- ：
+ clear
 fi
 #ffmpeg
      if [ ! -e /usr/local/bin/ ]; then
