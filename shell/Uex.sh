@@ -15,7 +15,7 @@ cd $Yz
 
 clear
 
-echo -e "\033[32m已安装的js插件：\033[0m"
+echo -e "\033[1;32m已安装的js插件：\033[0m"
 echo
 # 读取目录中的文件，并为每个文件标上序号
 files=(plugins/example/*)

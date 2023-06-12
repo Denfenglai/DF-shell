@@ -42,7 +42,7 @@ YUNZAI_PATH=$(cat "$HOME/.Yunzai")
     fi
 
 
-echo -e "\n\e[34m请输入你要删除的目录的编号，多个请用空格隔开: \e[0m"
+echo -e "\n\e[1;34m请输入你要删除的目录的编号，多个请用空格隔开: \e[0m"
         echo -e "===================================================\e[1;32m"
 read -r chosen_indexes
 chosen_indexes=($chosen_indexes)

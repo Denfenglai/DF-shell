@@ -141,7 +141,7 @@ fi
        fi
         
         # 克隆项目
-        echo -e "\033[34m 正在克隆Yunzai-Bot \033[0m";
+        echo -e "\033[1;34m 正在克隆Yunzai-Bot \033[0m";
         pushd ~/
         git clone --depth=1 https://gitee.com/yoimiya-kokomi/Yunzai-Bot
           if [ ! -d "~/Yunzai-Bot" ]
@@ -154,7 +154,7 @@ fi
         echo
         
         #安装Yunzai依赖
-        echo -e "\033[34m 安装依赖 \033[0m";
+        echo -e "\033[1;34m 安装依赖 \033[0m";
         cd ~/Yunzai-Bot
         pnpm install -P && pnpm install -P
         
