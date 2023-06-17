@@ -35,5 +35,7 @@ elif [ -f /etc/centos-release ]; then
 
 # 不支持的系统
 else
-  echo -e '\033[31m不支持的系统。\033[0m'
+  echo -e '\033[31m暂不支持该系统\033[0m'
+  echo "\e[1;31m支持\e[0m] Ubuntu 18+ CentOS 7+ 系统"
+  echo -e "\e[33m]详情请见 dengfenglai.cloud\e[0m"
 fi
