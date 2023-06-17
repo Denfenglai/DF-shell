@@ -32,12 +32,15 @@ if ! [ -x "$(command -v whiptail)" ]
     apt install whiptail -y
 fi
 
+#为ubuntu设置中文
+if [ -f /etc/lsb-release ]; then
+    apt-get install language-pack-zh-han* -y
+    echo "LANG=\"zh_CN.UTF-8\"
+    export LANG">>/etc/profile
+    source /etc/profile
+    fi
 #安装
 if ! [ -e "/usr/local/bin/d" ];then
-apt-get install language-pack-zh-han* -y
-echo "LANG=\"zh_CN.UTF-8\"
-export LANG">>/etc/profile
-source /etc/profile
   rm -rf /usr/local/bin/d
   wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
   {
