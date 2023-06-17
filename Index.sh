@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.3.1
+ver=0.3.2
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -347,6 +347,7 @@ fi
        "2" "安装Python 3.9.15和Poetry" \
        "3" "搭载喵喵面板图" \
        "4" "搭载涩涩面板图" \
+       "5" "添加命令别名" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
 #安装ffmpeg
@@ -370,17 +371,23 @@ clear
     clear
     bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/SeseGraph.sh)
     fi
-fi
-
+    
+    if [[ ${qt} = 5 ]];then
+    clear
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Alias.sh)
+    fi
+    fi
+    
+  #帮助
   if [[ ${sese} = 6 ]]
    then
     #帮助菜单
     whiptail --title "帮助" --msgbox "
 项目主页:
 https://dengfenglai.cloud
-作者QQ:3139373986
+作者:等风来
 使用有任何问题或有功能需求可以加群:
-797434884
+692314526
     " 17 40 7
   fi
 
