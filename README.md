@@ -52,14 +52,15 @@
 
 <hr/>
 
-### 在Ubuntu或Termux终端执行
+### 在终端执行
 ```bash
 bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 ```
+- 适配的系统: ubuntu centos
 - [常见问题](https://dengfenglai.cloud/QA/)
 
 
-## 二、Windows＆centos等其他系统请使用 [TRSS.me](http://trss.me)
+## 二、Windows等其他系统请使用 [TRSS.me](http://trss.me)
 >建议重装Ubuntu 22.04<br>
 >推荐使用服务器！更稳定！更兼容！<br>
 - 服务器推荐<br>
@@ -83,9 +84,9 @@ bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
 
 
 #### 作者列表
-| 作者 | QQ |QQ群组|
-| --- | --- | --- |
-|等风来|3139373986|295204145|
+| 作者 | QQ |
+| --- | --- |
+|等风来|3139373986|
 
 <hr/>
 
