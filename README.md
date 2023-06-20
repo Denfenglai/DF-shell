@@ -5,16 +5,16 @@
 
 <div align="center">
 
-# [DF-Shell](http://dengfenglai.cloud)
+# [DF](http://dengfenglai.cloud)
 
 一键部署 管理 配置Yunzai-Bot
 
 </div>
 
 ## 一.快速上手💡<br>
-- 在使用前请确保你有正确使用[搜索引擎](http://baidu.com)的技能
-- [安卓所需的软件](https://pan.baidu.com/s/1s4oWDWzzdP_ow5z6MJANIw?pwd=99xs)
-- 使用请看[B站教程](https://b23.tv/2bkII8R)
+> 在使用前请确保你有正确使用[搜索引擎](http://baidu.com)的技能   
+> [安卓所需的软件](https://pan.baidu.com/s/1s4oWDWzzdP_ow5z6MJANIw?pwd=99xs)   
+> 使用请看[B站教程](https://b23.tv/2bkII8R)   
 <details>
   <summary>脚本快捷命令</summary>
 
@@ -61,13 +61,7 @@ bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 
 
 ## 二、Windows等其他系统请使用 [TRSS.me](http://trss.me)
->建议重装Ubuntu 22.04<br>
->推荐使用服务器！更稳定！更兼容！<br>
-- 服务器推荐<br>
-- [妖云网络IDC](https://02vps.cn/aff/DPUVCKMW)
-- [腾讯云服务器](https://cloud.tencent.com/act/pro/seckill_season?fromSource=gwzcw.7285964.728964.7285964&utm_medium=cpc&utm_id=gwzcw.7285964.7285964.7285964)
-- [阿里云免费试用三个月](https://free.aliyun.com/?utm_content=se_1013927383)
-  
+>推荐重装Ubuntu 22.04<br>
 
 ### 三、以下脚本可以独立使用
 
@@ -88,19 +82,21 @@ bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
 | --- | --- |
 |等风来|3139373986|
 
+
 <hr/>
 
 
-#### 相关链接
+#### 特别感谢
 
-- [Yunzai](https://gitee.com/Le-niao/Yunzai-Bot)
-- [Miao-Yunzai](https://gitee.com/yoimiya-kokomi/Miao-Yunzai)
-- [Miao-plugin](https://gitee.com/yoimiya-kokomi/miao-plugin)
-- [Yunzai插件库](https://gitee.com/yhArcadia/Yunzai-Bot-plugins-index)
-- [白狐Ubuntu-Yunzai](https://gitee.com/baihu433/Ubuntu-Yunzai)
-- [早苗狐](https://afdian.net/@Sanae)
+- [Yunzai-Bot](https://gitee.com/Le-niao/Yunzai-Bot)
+- [@寒暄](https://gitee.com/haanxuan)
+- [@白狐](https://gitee.com/baihu433)
+- [@喵喵](https://gitee.com/yoimiya-kokomi)
+- [@早苗狐](https://afdian.net/@Sanae)
+- 所有热爱Yunzai的创作者们
 
 #### 友情链接
+- [DF官网](http://dengfenglai.cloud)
 - [XDM官网](https://hanxuan.cc/)
 - [TRSS官网](https://trss.me/)
 - [椰奶官网](https://www.yenai.ren/)
