@@ -9,7 +9,7 @@
 
 一键部署 管理 配置Yunzai-Bot
 
-[![访问量](https://profile-counter.glitch.me/Wind-is-so-strong/yz/count.svg)](https://dengfenglai.cloud)
+[![访问量](https://profile-counter.glitch.me/yz/count.svg)](https://dengfenglai.cloud)
 
 </div>
 
