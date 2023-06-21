@@ -36,9 +36,9 @@ echo -e "\e[36m    项目主页:\e[0mdengfenglai.cloud"
     1)
         if [ -d data/icqq ]; then
         rm -rf data/icqq
-else
+    else
         rm -rf data/device.json
-fi
+    fi
         echo -n "修复完成 回车返回";read -p ""
         break
         ;;

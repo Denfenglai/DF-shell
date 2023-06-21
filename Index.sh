@@ -305,10 +305,12 @@ fi
        "1" "重装云崽依赖" \
        "2" "打开puppeteer chromium修复菜单" \
        "3" "打开登录错误码修复菜单" \
+       "4" "重启PM2报错修复" \
+       "5" "快速删除虚拟设备文件" \
        3>&1 1>&2 2>&3 )
       
-      if [[ ${bc} = 1 ]];then
-      rm -rf node_modules
+        if [[ ${bc} = 1 ]];then
+        rm -rf node_modules
         pnpm cache clean --force
         pnpm install
         echo -en "\033[32m 修复完成 回车返回\033[0m";read -p ""
@@ -326,6 +328,40 @@ fi
         cd $Yz
         bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
         fi
+        
+        if [[ ${bc} = 4 ]];then
+        clear
+        cd "$Yz"
+        echo -e "\e[96m升级依赖\e[0m"
+        if pnpm update; then
+        clear
+        echo -e "\e[96m重新安装标注文件的依赖\e[0m"
+        if pnpm install -P && pnpm install -P; then
+        echo -e "\e[96m全局安装PM2并更新\e[0m"
+        if pnpm install pm2 -g && pm2 update; then
+        echo -en "修复完成 回车返回";read -p ""
+        else
+        echo -en "\e[91m安装失败！回车返回\e[0m";read -p ""
+        fi
+        else
+        echo -en "\e[91m安装失败！回车返回\e[0m";read -p ""
+        fi
+        else
+        echo -en "\e[91m安装失败！回车返回\e[0m";read -p ""
+        fi
+        
+        if [[ ${bc} = 5 ]];then
+        clear
+        cd $Yz
+        if [ -d data/icqq ]; then
+            rm -rf data/icqq
+            else
+            rm -rf data/device.json
+        fi
+        echo -en "删除完成 回车返回";read -p ""
+     fi
+     
+     #未安装云崽
      else
      whiptail --title "哦呀？" --msgbox "
      请检查你是否正确安装云崽并设置脚本路径
