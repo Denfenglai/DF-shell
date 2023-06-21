@@ -349,6 +349,7 @@ fi
         else
         echo -en "\e[91m安装失败！回车返回\e[0m";read -p ""
         fi
+        fi
         
         if [[ ${bc} = 5 ]];then
         clear
