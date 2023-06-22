@@ -56,6 +56,9 @@ Yz=$(head -n 1 "${HOME}/.Yunzai")
 
 while true
 do
+export NEWT_COLORS='
+root=,blue
+'
 sese=$(whiptail \
 --title "DF" \
 --backtitle "脚本纯免费使用 主页官网dengfenglai.cloud 作者:等风来" \
