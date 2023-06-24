@@ -393,7 +393,7 @@ fi
 #安装ffmpeg
 if [[ ${qt} = 1 ]];then
 clear
-    bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
+    bash <(curl -sL https://gitee.com/Wind-is-so-strong/ffmpeg/raw/master/ffmpeg.sh)
     break
     fi
     
