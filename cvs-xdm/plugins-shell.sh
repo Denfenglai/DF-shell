@@ -6,7 +6,16 @@ if [ -f "$HOME/.Yunzai" ]; then
 else
   echo -e "\033[33m初始化文件中\033[0m"
   sleep 0.3
-  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+  if [ -f "/root/Yunzai-Bot" ]; then
+    echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+  elif [ -f "/root/Miao-Yunzai" ]; then
+    echo "/root/Miao-Yunzai" > "$HOME/.Yunzai"
+  elif [ -f "/root/TRSS-Yunzai" ]; then
+    echo "/root/TRSS-Yunzai" > "$HOME/.Yunzai"
+  else
+    echo -e "\033[31m未找到对应的Yunzai-Bot路径\033[0m"
+    # 如果都找不到，直接跳过写入留空
+  fi
 fi
 #定义云崽路径
 Yz=$(head -n 1 "${HOME}/.Yunzai")

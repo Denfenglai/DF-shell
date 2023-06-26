@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.3.4
+ver=0.3.5
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -49,7 +49,16 @@ if [ -f "$HOME/.Yunzai" ]; then
 else
   echo -e "\033[33m初始化文件中\033[0m"
   sleep 0.3
-  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+  if [ -f "/root/Yunzai-Bot" ]; then
+    echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+  elif [ -f "/root/Miao-Yunzai" ]; then
+    echo "/root/Miao-Yunzai" > "$HOME/.Yunzai"
+  elif [ -f "/root/TRSS-Yunzai" ]; then
+    echo "/root/TRSS-Yunzai" > "$HOME/.Yunzai"
+  else
+    echo -e "未找到对应的Yunzai-Bot路径\033[0m"
+    # 如果都找不到，直接跳过写入留空
+  fi
 fi
 #定义云崽路径
 Yz=$(head -n 1 "${HOME}/.Yunzai")
@@ -209,6 +218,7 @@ if [ -d "$Yz" ];then
        "1" "Yunzai-Bot" \
        "2" "Miao-Yunzai" \
        "3" "早苗BOT" \
+       "4" "频道TRSS-Yunzai" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
     #Yunzai-BOT
@@ -257,6 +267,13 @@ fi
     if [[ ${install} = 3 ]]
     then
         bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
+    break
+    fi
+    
+    #没咕完的trss
+    if [[ ${install} = 4 ]]
+    then
+        bash <(curl -sL gitee.com/Wind-is-so-strong/tsgp/raw/master/Tzaz.sh)
     break
     fi
  fi
