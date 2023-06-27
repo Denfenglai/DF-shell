@@ -56,7 +56,7 @@ else
   elif [ -f "/root/TRSS-Yunzai" ]; then
     echo "/root/TRSS-Yunzai" > "$HOME/.Yunzai"
   else
-    echo -e "未找到对应的Yunzai-Bot路径\033[0m"
+    rm -rf ~/.Yunzai
     # 如果都找不到，直接跳过写入留空
   fi
 fi
