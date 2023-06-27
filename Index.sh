@@ -208,8 +208,7 @@ if [ -d "$Yz" ];then
  fi
 
   #安装脚本
-  if [[ ${sese} = 2 ]]
-    then
+  if [[ ${sese} = 2 ]]; then
     clear
     install=$(whiptail \
        --title "⸜₍๑•⌔•๑₎⸝" \
@@ -221,62 +220,53 @@ if [ -d "$Yz" ];then
        "4" "频道TRSS-Yunzai" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
-    #Yunzai-BOT
-    if [[ ${install} = 1 ]]
-    then
-    clear
-    if [ -d "$HOME/Yunzai-Bot" ];then
-       whiptail --title "等风来" --msgbox "
-       您已安装云崽 禁止套娃
-       " 10 43
-    else
-    if [ -f "/etc/redhat-release" ]; then
-# 如果是CentOS系统
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
-exit
-elif [ -f "/etc/lsb-release" ]; then
-# 如果是Ubuntu系统
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
-exit
-else
-    echo "不支持当前系统"
-    exit
-fi
-    fi
-
- fi
- fi
-    #Miao-Yunzai
-    if [[ ${install} = 2 ]]
-    then
-    # 获取系统发行版本的信息
-    if [ -f "/etc/redhat-release" ]; then
-# 如果是CentOS系统
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
-exit
-elif [ -f "/etc/lsb-release" ]; then
-# 如果是Ubuntu系统
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
-exit
-else
-    echo "不支持当前系统"
-    exit
-fi
     
-    #早苗BOT
-    if [[ ${install} = 3 ]]
-    then
-        bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
-    break
-    fi
-    
-    #没咕完的trss
-    if [[ ${install} = 4 ]]
-    then
-        bash <(curl -sL gitee.com/Wind-is-so-strong/tsgp/raw/master/Tzaz.sh)
-    break
-    fi
- fi
+    case ${install} in
+        1)
+            clear
+            if [ -d "$HOME/Yunzai-Bot" ]; then
+                whiptail --title "等风来" --msgbox "
+                您已安装云崽 禁止套娃
+                " 10 43
+            else
+                if [ -f "/etc/redhat-release" ]; then
+                    # 如果是CentOS系统
+                    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+                elif [ -f "/etc/lsb-release" ]; then
+                    # 如果是Ubuntu系统
+                    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+                else
+                    echo "不支持当前系统"
+                    exit
+                fi
+            fi
+            ;;
+        2)
+            # 获取系统发行版本的信息
+            if [ -f "/etc/redhat-release" ]; then
+                # 如果是CentOS系统
+                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+            elif [ -f "/etc/lsb-release" ]; then
+                # 如果是Ubuntu系统
+                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+            else
+                echo "不支持当前系统"
+                exit
+            fi
+            ;;
+        3)
+            bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
+            break
+            ;;
+        4)
+            bash <(curl -sL gitee.com/Wind-is-so-strong/tsgp/raw/master/Tzaz.sh)
+            break
+            ;;
+        *)
+            # 其他情况的处理，可以根据需要进行修改
+            ;;
+    esac
+fi
 
 
   #调用插件脚本
