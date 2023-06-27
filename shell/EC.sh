@@ -80,8 +80,7 @@ sleep 5
     else
    rm -rf data/device.json
 fi
-#笨比Xx居然不自己cd！
-bash <(curl -sL https://gitee.com/haanxuan/version/raw/master/version.sh)
+bash <(curl -sL gitee.com/haanxuan/version/raw/master/version.sh)
     break
     ;;
 
