@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.3.6
+ver=0.3.6.2
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -245,10 +245,10 @@ if [ -d "$Yz" ];then
             # 获取系统发行版本的信息
             if [ -f "/etc/redhat-release" ]; then
                 # 如果是CentOS系统
-                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Mzaz.sh)
             elif [ -f "/etc/lsb-release" ]; then
                 # 如果是Ubuntu系统
-                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Mzaz.sh)
             else
                 echo "不支持当前系统"
                 exit
