@@ -354,7 +354,10 @@ if [ -e "/usr/bin/m" ]
            sed -i -e '1a cd ~/Miao-Yunzai && pnpm stop && clear && echo Miao-Yunzai已停止运行' /usr/bin/ms
            chmod 777 /usr/bin/ms
         fi
-
+    #写入路径
+        if [ ! -f "/root/Yunzai-Bot" ]; then
+    echo "/root/Miao-Yunzai" > /root/.Yunzai
+    fi
 #哇趣
 clear
 echo -e "\e[1;32m恭喜主人 已经加载完啦\e[0m"

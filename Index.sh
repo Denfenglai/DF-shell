@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ver=0.3.6.2
+ver=0.3.6.3
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
@@ -43,20 +43,29 @@ R="\e[31m"
 Q="\e[36m"
 L="\e[34m"
 H="\e[33m"
-#初始化加载
-if [ -f "$HOME/.Yunzai" ]; then
+
+
+target_file="$HOME/.Yunzai"
+
+if [ -f "$target_file" ]; then
   echo -e "\033[32m校验成功\033[0m"
 else
   echo -e "\033[33m初始化文件中\033[0m"
   sleep 0.3
-  if [ -f "/root/Yunzai-Bot" ]; then
-    echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
-  elif [ -f "/root/Miao-Yunzai" ]; then
-    echo "/root/Miao-Yunzai" > "$HOME/.Yunzai"
-  elif [ -f "/root/TRSS-Yunzai" ]; then
-    echo "/root/TRSS-Yunzai" > "$HOME/.Yunzai"
-  else
-    rm -rf ~/.Yunzai
+
+  # 指定可能的文件列表，按优先级排序
+  files=("/root/Yunzai-Bot" "/root/Miao-Yunzai" "/root/TRSS-Yunzai")
+
+  # 遍历文件列表，找到存在的文件并写入目标文件
+  for file in "${files[@]}"; do
+    if [ -f "$file" ]; then
+      echo "$file" > "$target_file"
+      break
+    fi
+  done
+
+  if [ ! -f "$target_file" ]; then
+    rm -f "$target_file"
     # 如果都找不到，直接跳过写入留空
   fi
 fi
@@ -70,9 +79,9 @@ root=,blue
 '
 sese=$(whiptail \
 --title "DF" \
---backtitle "脚本纯免费使用 主页官网dengfenglai.cloud 作者:等风来" \
+--backtitle "脚本纯免费使用   主页官网dengfenglai.cloud   作者:等风来" \
 --menu "${ver}
-当前路径: $Yz" \
+$Yz" \
 20 40 9 \
 "1" "Bot管理" \
 "2" "安装管理" \
