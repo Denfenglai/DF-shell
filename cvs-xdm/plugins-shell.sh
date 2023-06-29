@@ -138,7 +138,7 @@ echo -e "\e[1;36m少女祈祷中..\e[0m"
         echo -e "\e[1;32m开始安装喵喵插件\e[0m"
 git clone https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
         echo -e "\e[1;32m开始安装喵喵插件依赖\e[0m"
-pnpm add image-size -w
+echo y|pnpm install -P
         echo -e "\e[1;32m加载完成..\e[0m"
         ;;
 #———————————————————————————————————————————————————————————————        
@@ -155,7 +155,7 @@ fi
 if [ -d "$Yz/plugins/Guoba-Plugin" ]; then
     echo -e "\e[1;32m锅巴插件克隆完成\e[0m"
     echo -e "\e[1;33m开始安装锅巴插件所需依赖\e[0m"
-    pnpm install --filter=guoba-plugin
+    echo y|pnpm install --filter=guoba-plugin
     echo -e "\e[1;32m锅巴插件安装成功.\e[0m"
 else
     echo -e "\e[1;31m锅巴插件安装失败.\e[0m"
@@ -196,7 +196,7 @@ cd $Yz
 	    echo -e "\e[1;32m开始执行椰奶插件安装命令.\e[0m"
 git clone https://gitee.com/yeyang52/yenai-plugin.git ./plugins/yenai-plugin
 echo -e "\e[1;32m开始执行椰奶插件依赖安装命令\e[0m"
-pnpm install
+echo y|pnpm install
 echo -e "\e[1;32m椰奶插件安装成功.\e[0m"
         ;;
 #———————————————————————————————————————————————————————————————        
@@ -242,7 +242,7 @@ cd ./plugins/XiaoXuePlugin
 echo -e "\e[1;32m开始执行小雪插件依赖安装命令\e[0m"     
 echo -e "\e[1;32m只使用pnpm的命令\e[0m"  
 echo -e "\e[1;32m如果失败了请手动试试cnpm或npm\e[0m"      
-pnpm install -P
+echo y|pnpm install -P
 echo -e "\e[1;32m执行结束 请主人判断是否成功\e[0m" 
         ;;
 #———————————————————————————————————————————————————————————————        
@@ -345,7 +345,7 @@ fi
 if [ -d "$Yz/plugins/l-plugin" ]; then
     echo -e "\e[1;33mL开始安装L插件依赖\e[0m"
     cd plugins/l-plugin
-    pnpm install
+    echo y|pnpm install
     echo -e "\e[1;32mL插件安装成功.\e[0m"
 else
     echo -e "\e[1;31mL插件安装失败.\e[0m"
@@ -646,7 +646,7 @@ fi
 
 if [ -d "$Yz/plugins/FanSky_Qs" ]; then
     cd plugins/FanSky_Qs
-    pnpm install
+    echo y|pnpm install
     echo -e "\e[1;32mFanSky_Qs插件安装成功.\e[0m"
 else
     echo -e "\e[1;31mFanSky_Qs插件安装失败.\e[0m"
@@ -781,7 +781,7 @@ fi
         echo -e "\e[32m开始执行鳄梨插件依赖安装命令\e[0m"
         # 安装项目依赖
         cd plugins/avocado-plugin
-        pnpm i
+        echo y|pnpm i
         echo -e "\e[32m鳄梨插件安装成功\e[0m"
     else
         echo -e "\e[31m鳄梨插件安装失败，请检查网络\e[0m"
@@ -801,7 +801,7 @@ fi
         clear
         echo -e "\e[32m开始执行憨憨插件依赖安装命令\e[0m"
         cd ./plugins/hanhan-plugin
-        pnpm i
+        echo y|pnpm i
         echo -e "\e[32m鳄梨插件安装成功\e[0m"
     else
         echo -e "\e[31m鳄梨插件安装失败，请检查网络\e[0m"
@@ -821,7 +821,7 @@ fi
         clear
         echo -e "\e[32m开始执行憨憨插件依赖安装命令\e[0m"
         cd ./plugins/ql-plugin
-        pnpm i
+        echo y|pnpm i
         echo -e "\e[32m清凉插件安装成功\e[0m"
     else
         echo -e "\e[31m清凉插件安装失败，请检查网络\e[0m"

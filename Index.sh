@@ -285,7 +285,7 @@ fi
     cha=$(whiptail \
        --title "꒰ *•ɷ•* ꒱" \
        --menu "${ver}
-当前路径: $Yz" \
+ $Yz" \
        17 35 6 \
        "1"  "安装plugin插件" \
        "2"  "卸载plugin插件" \
@@ -319,7 +319,7 @@ fi
     bc=$(whiptail \
        --title "报错修复" \
        --menu "${ver}
-当前路径:$Yz" \
+$Yz" \
        17 40 5 \
        "1" "重装云崽依赖" \
        "2" "打开puppeteer chromium修复菜单" \
@@ -396,7 +396,7 @@ fi
     qt=$(whiptail \
        --title "⸜₍๑•⌔•๑₎⸝" \
        --menu "${ver}
-当前路径:$Yz
+$Yz
 功能等待添加，欢迎反馈~" \
        17 35 6 \
        "1" "安装ffmpeg" \
