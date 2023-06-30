@@ -307,7 +307,7 @@ if [ -e "/usr/bin/m" ]
            pushd $HOME 
            echo '正在将启动写入启动命令'
            #转到目录
-           echo 'cd /root/Miao-Yunzai && exec bash -i' >> /usr/local/bin/mz
+           echo 'cd /root/Miao-Yunzai && exec bash -i' >> /usr/bin/mz
            chmod 777 /usr/bin/mz
            #启动
            echo echo 正在启动Miao-Yunzai > /usr/bin/m
