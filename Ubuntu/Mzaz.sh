@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d "$HOME/Miao-Yunzai" ];then
+if [ -d "$HOME/Miao-Yunzai/plugins/miao-plugin" ];then
        whiptail --title "等风来" --msgbox "
        您已安装喵崽 请勿重复安装
        " 10 43
@@ -41,132 +41,84 @@ node_version=$(node -v)
 
 # 检测node版本是否在指定的版本号范围内
 if [[ $node_version == v1[6-9].* ]] || [[ $node_version == v[2-9][0-9].* ]]; then
-  :
-else
-  # 22.04用不了17.9换19.6节点
   clear
-  echo -e ${Tip} 开始安装node js
-  if [ $(lsb_release -r | cut -f2) == "22.04" ]; then
-    apt-get clean
-    bash <(curl -sL https://gitee.com/haanxuan/Fork/raw/master/node19.sh)
-    apt-get install -y nodejs
+  node -v
+  echo -e ${Tip} node 安装成功！
+  echo -e ${OK}
+else
+  # 检测Ubuntu版本并选择合适的Node.js脚本URL
+  ubuntu_version=$(lsb_release -r | cut -f2)
+  script_url=""
+  
+  if [ "$ubuntu_version" == "22.04" ]; then
+    script_url="https://gitee.com/haanxuan/Fork/raw/master/node19.sh"
   else
-    apt-get clean
-    bash <(curl -sL https://gitee.com/haanxuan/Fork/raw/master/node17.sh)
-    apt-get install -y nodejs
+    script_url="https://gitee.com/haanxuan/Fork/raw/master/node17.sh"
   fi
 
-  # 100%安装失败？那就再试一次！
-node_version=$(node -v)
-
-# 检测node版本是否在指定的版本号范围内
-if [[ $node_version == v1[6-9].* ]] || [[ $node_version == v[2-9][0-9].* ]]; then
-  :
-else
-  # 22.04用不了17.9换19.6节点
   clear
-  echo -e ${Tip} 开始安装node js
-  if [ $(lsb_release -r | cut -f2) == "22.04" ]; then
-    apt-get clean
-    bash <(curl -sL https://gitee.com/haanxuan/Fork/raw/master/node19.sh)
-    apt-get install -y nodejs
-  else
-    apt-get clean
-    bash <(curl -sL https://gitee.com/haanxuan/Fork/raw/master/node17.sh)
-    apt-get install -y nodejs
-  fi
-fi  
+  echo -e ${Tip} 开始安装 Node.js
+  
+  apt-get clean
+  bash <(curl -sL $script_url)
+  apt-get install -y nodejs
 
-  # 再查一次！
-  # 获取node版本号
+  # 检测node版本是否在安装后的指定版本号范围内
   node_version=$(node -v)
-
-  # 检测node版本是否在指定的版本号范围内
   if [[ $node_version == v1[6-9].* ]] || [[ $node_version == v[2-9][0-9].* ]]; then
     clear
     node -v
-    echo -e ${Tip} node  安装成功！
+    echo -e ${Tip} Node.js 安装成功！
     echo -e ${OK}
   else
-    echo -e ${Error} node安装失败
+    echo -e ${Error} Node.js 安装失败
     echo -e ${Tip} 请科学一下上网方式重新运行脚本
     exit 1
-    exit
   fi
 fi
 
-# 检测是否安装了redis
-dpkg -l | grep redis
+# 检测是否安装了 Redis
+dpkg -s redis-server &> /dev/null
 
-# 如果没有安装，则安装redis数据库
+# 如果没有安装，则安装 Redis 数据库
 if [ $? -ne 0 ]; then
-clear
-# 安装redis
-echo -e ${Tip} 开始安装redis数据库
-apt-get install redis -y
-redis-server --daemonize yes
-# 判断是否安装成功
-if [ $? -eq 0 ]; then
-redis-server --daemonize yes
-echo -e ${Info} redis数据库 安装成功！
-echo -e ${OK}
-sleep 3
-else
-echo -e ${Error} redis安装失败
-echo -e ${Tip} 请重新运行脚本
-exit
- fi
+  clear
+  # 安装 Redis
+  echo -e ${Tip} 开始安装 Redis 数据库
+  apt-get install redis -y
+  redis-server --daemonize yes
+
+  # 判断是否安装成功
+  if [ $? -eq 0 ]; then
+    echo -e ${Info} Redis 数据库安装成功！
+    echo -e ${OK}
+    sleep 3
+  else
+    echo -e ${Error} Redis 安装失败
+    echo -e ${Tip} 请重新运行脚本
+    exit 1
+  fi
 fi
 
 clear
-# 检查chromium-browser是否已安装
-clear
-if [ $(dpkg-query -W -f='${Status}' chromium-browser 2>/dev/null | grep -c "ok installed") -eq 0 ];
-then
-  # 如果没有安装，则安装chromium-browser
-echo -e ${Tip} 开始安装谷歌浏览器
-apt install chromium-browser -y
-  if [ $? -eq 0 ]; then
-  #中文字体
-  apt install -y fonts-wqy-microhei
-  #蜜汁依赖
-  apt-get install ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils libxkbcommon0 -y
-echo -e ${Info} 谷歌浏览器安装成功
-echo -e ${OK}
-sleep 3
-  else
-echo -e ${Error} 谷歌浏览器安装失败
-echo -e ${Tip} 3秒后再次尝试
-sleep 3
-  fi
-else
- ：
-fi
 
-#阿里云轻量100%失败一次，那就再试试咯
-clear
 # 检查chromium-browser是否已安装
-clear
-if [ $(dpkg-query -W -f='${Status}' chromium-browser 2>/dev/null | grep -c "ok installed") -eq 0 ];
-then
-  # 如果没有安装，则安装chromium-browser
-echo -e ${Tip} 开始安装谷歌浏览器
-apt install chromium-browser -y
-  if [ $? -eq 0 ]; then
-  #中文字体
-  apt install -y fonts-wqy-microhei
-  #蜜汁依赖
-  apt-get install ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils libxkbcommon0 -y
-echo -e ${Info} 谷歌浏览器安装成功
-echo -e ${OK}
-sleep 3
-  else
-echo -e ${Error} 谷歌浏览器安装失败
-echo -e ${Tip} 请重新运行脚本
-exit
-  fi
-else
- ：
+if ! dpkg-query -W -f='${Status}' chromium-browser 2>/dev/null | grep -q "installed"; then
+  # 安装chromium-browser
+  echo -e "${Tip} 开始安装谷歌浏览器"
+  apt install -y chromium-browser fonts-wqy-microhei || {
+    echo -e "${Error} 谷歌浏览器安装失败，请重新运行脚本"
+    exit 1
+  }
+  
+  # 安装依赖
+  apt-get install -y ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils libxkbcommon0 || {
+    echo -e "${Error} 依赖安装失败，请重新运行脚本"
+    exit 1
+  }
+  
+  echo -e "${Info} 谷歌浏览器安装成功"
+  sleep 3
 fi
 
 #克隆喵崽项目
@@ -186,10 +138,29 @@ sleep 3
 
 
 clear
-#喵崽得装喵喵插件
-echo -e ${Info} 安装喵喵插件
-cd /root/Miao-Yunzai
-git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
+
+# 安装喵喵插件
+        if [ ! -d "/root/Miao-Yunzai/plugins/miao-plugin" ]; then
+            echo -e "${Info} 使用 Gitee 安装喵喵插件"
+            cd /root/Miao-Yunzai
+
+            # 使用gitee克隆
+            git clone --depth=1 https://gitee.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
+
+            # 检查是否安装成功
+            if [ ! -d "/root/Miao-Yunzai/plugins/miao-plugin" ]; then
+                echo -e "\e[31m克隆失败！正在切换Github克隆……\e[0m"
+
+                # 使用github
+                git clone --depth=1 https://github.com/yoimiya-kokomi/miao-plugin.git ./plugins/miao-plugin/
+
+                # 再次检查是否安装成功
+                if [ ! -d "/root/Miao-Yunzai/plugins/miao-plugin" ]; then
+                    echo -e "\e[31m喵喵插件安装失败！请检查网络然后重新运行脚本！\e[0m"
+                    exit 1
+                fi
+            fi
+        fi
 
 clear
 #细节优化
@@ -273,38 +244,43 @@ echo -e ${Info} 哇趣-你已经克隆过云崽了
 sleep 3
 fi
 
-#安装pnpm
+# 安装pnpm
 clear
-echo -e ${Info} 开始安装pnpm
+echo -e "${Info} 开始安装pnpm"
 cd /root/Miao-Yunzai
+
 if npm --registry=https://registry.npmmirror.com install pnpm -g; then
-    # 如果安装成功，则输出提示信息
-echo -e ${Info} pnpm安装成功
-echo -e ${OK}
-sleep 3
+    echo -e "${Info} pnpm安装成功"
+    echo -e "${OK}"
+    sleep 3
 else
-    # 如果安装失败，则输出提示信息
-echo -e ${Error} pnpm安装失败
-echo -e ${Tip} 请重新运行脚本
-exit
+    echo -e "${Error} pnpm安装失败"
+    echo -e "${Tip} 请重新运行脚本"
+    exit
 fi
 
-#安装依赖
+# 安装依赖
 clear
-echo -e ${Info} 开始安装云崽所需依赖
+echo -e "${Info} 开始安装云崽所需依赖"
 cd /root/Miao-Yunzai
 pnpm config set registry https://registry.npmmirror.com
+
+        #检查CPU架构
+        architecture=$(uname -m)
+        # 如果是ARM架构
+        if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
+        #修改依赖项
+        sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Yunzai-Bot/package.json
+        fi
+       
 if pnpm install -P; then
-    # 如果安装成功，则输出提示信息 
-pnpm add qrcode axios -w
-echo -e ${Info} 依赖安装成功
-echo -e ${OK}
-sleep 3
+    echo -e "${Info} 依赖安装成功"
+    echo -e "${OK}"
+    sleep 3
 else
-    # 如果安装失败，则输出提示信息
-echo -e ${Error} 依赖安装失败
-echo -e ${Tip} 请重新运行脚本
-exit
+    echo -e "${Error} 依赖安装失败"
+    echo -e "${Tip} 请重新运行脚本"
+    exit
 fi
 
 #蜜汁22.04

@@ -159,6 +159,9 @@ fi
         #安装Yunzai依赖
         echo -e "\033[34m 安装依赖 \033[0m";
         cd ~/Yunzai-Bot
+    file_path="/root/Miao-Yunzai/lib/config/qq.js"
+    search_str="type: process.platform == 'win32' ? 'Input' : 'password',"
+    replace_str="type: process.platform == 'win32' ? 'Input' : 'input',"
         #检查CPU架构
         architecture=$(uname -m)
         # 如果是ARM架构
