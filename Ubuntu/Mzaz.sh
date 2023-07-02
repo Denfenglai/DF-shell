@@ -270,7 +270,7 @@ pnpm config set registry https://registry.npmmirror.com
         # 如果是ARM架构
         if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
         #修改依赖项
-        sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Yunzai-Bot/package.json
+        sed -i 's/"puppeteer": ".*"/"puppeteer": "^13.7.0"/g' /root/Miao-Yunzai/package.json
         fi
        
 if pnpm install -P; then
