@@ -225,8 +225,7 @@ if [ -d "$Yz" ];then
        17 35 6 \
        "1" "Yunzai-Bot" \
        "2" "Miao-Yunzai" \
-       "3" "早苗BOT" \
-       "4" "频道TRSS-Yunzai" \
+       "3" "频道TRSS-Yunzai" \
        "0" "返回" \
        3>&1 1>&2 2>&3 )
     
@@ -264,15 +263,11 @@ if [ -d "$Yz" ];then
             fi
             ;;
         3)
-            bash <(curl -sL https://gitee.com/haanxuan/cv/raw/master/MiaoFox.sh)
-            break
-            ;;
-        4)
             bash <(curl -sL gitee.com/Wind-is-so-strong/tsgp/raw/master/Tzaz.sh)
             break
             ;;
         *)
-            # 其他情况的处理，可以根据需要进行修改
+            # 退出
             ;;
     esac
 fi
