@@ -8,7 +8,7 @@
         #判断是否安装了node.js
         if ! command -v node &> /dev/null
         then
-        echo "Node.js 未安装"
+        echo "- Node.js 未安装"
         Ubuntuv=$(lsb_release -r | awk '{print $2}')
         until npm -v
         do
@@ -38,7 +38,7 @@ else
     echo -e "\e[32mNode.js 安装成功！\e[0m"
 fi
        else
-        echo "Node.js 已安装"
+        echo "- Node.js 已安装"
  fi
         
         
@@ -46,21 +46,21 @@ fi
         if ! command -v pnpm &> /dev/null
 then
         echo "pnpm 未安装"
-        echo -e "\033[34m 开始安装pnpm  \033[0m";
+        echo -e "\033[34m- 开始安装pnpm  \033[0m";
         npm config set registry http://registry.npm.taobao.org/
         npm install -g npm
         npm install -g pnpm
         pnpm -v
         if [ $? -ne 0 ]
         then
-          echo -e "\033[34m 安装pnpm失败 请检查网络 \033[0m";
+          echo -e "\033[34m- 安装pnpm失败 请检查网络 \033[0m";
           exit
         else
-          echo -e "\033[34m 安装pnpm成功 \033[0m";
+          echo -e "\033[34m- 安装pnpm成功 \033[0m";
         fi
         echo
 else
-    echo "pnpm 已安装"
+    echo "- pnpm 已安装"
 fi
     # 检测是否安装了redis
     dpkg -l | grep redis
@@ -99,10 +99,10 @@ clear
       apt install -y fonts-wqy-microhei
       #蜜汁依赖
      apt-get install ca-certificates fonts-liberation libasound2 libatk-bridge2.0-0 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgbm1 libgcc1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 lsb-release wget xdg-utils libxkbcommon0 -y
-     echo -e "\e[32m谷歌浏览器安装成功\e[0m"
+     echo -e "\e[32m- 谷歌浏览器安装成功\e[0m"
 sleep 3
   else
-echo -e "\e[31m谷歌浏览器安装失败\e[0m"
+echo -e "\e[31m- 谷歌浏览器安装失败\e[0m"
 echo -e "\e[33m3秒后重试\e[0m"
 sleep 3
   fi
@@ -187,17 +187,11 @@ if [ $architecture == "arm" ] || [ $architecture == "aarch64" ]; then
 fi
         
         #写入自动命令
-        if [ -e "/usr/bin/dfl" ]
-           then
-           echo -e "\033[34m 检测到已写入 \033[0m";
-           echo "退出"
-        else
            pushd $HOME 
             echo '正在写入快捷命令'
-            sed -i '/alias yz/d' ~/.bashrc
-            sed -i '/alias l/d' ~/.bashrc
            #转到云崽目录
-           echo "alias yz='cd /root/Yunzai-Bot'" >> ~/.bashrc
+           echo 'cd /root/Yunzai-Bot && exec bash -i' /usr/bin/yz
+           chmod 777 /usr/bin/yz
            #启动
            echo echo 正在启动Yunzai-Bot > /usr/bin/y
            sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && node app' /usr/bin/y 
@@ -207,7 +201,8 @@ fi
            sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && pnpm run start' /usr/bin/r
            chmod 777 /usr/bin/r
            #日志
-           echo "alias l='cd /root/Yunzai-Bot && clear && echo -e \"\e[1;32m当前日志 如果没有则是没启动云崽\e[0m\" && npm run log'" >> ~/.bashrc
+           echo 'cd /root/Yunzai-Bot && clear && echo -e "\e[1;32m当前日志 如果没有则是没启动云崽\e[0m" && pnpm log' /usr/bin/l
+           chmod 777 /usr/bin/l
            #登录
            echo echo 启动Yunzai-Bot账号配置 > /usr/bin/g
            sed -i -e '1a cd ~/Yunzai-Bot && pnpm run login' /usr/bin/g
@@ -220,7 +215,6 @@ fi
            chmod 777 /usr/bin/dfl
            pushd 
            echo
-        fi
         #写入路径
         echo "/root/Yunzai-Bot" > /root/.Yunzai
         

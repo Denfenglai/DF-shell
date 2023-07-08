@@ -68,12 +68,6 @@ echo -e "\e[36m    项目主页:\e[0mdengfenglai.cloud"
     3)
 #套用xdm的脚本，咱也不看直接套
 clear
-echo -e "$Y 本方法是安装0.3.6版本然后使用协议6$N"
-echo -e "$Q 也就是安卓8.8.8 $N"
-echo -e "$R 此方法必须完全删除虚拟设备信息！$N"
-echo -e "$Q 赞美寒暄~$N"
-echo -e "$Y 5秒后开始安装$N"
-sleep 5
 #先提前删一遍
     if [ -d data/icqq ]; then
    rm -rf data/icqq
