@@ -190,7 +190,7 @@ fi
            pushd $HOME 
             echo '正在写入快捷命令'
            #转到云崽目录
-           echo 'cd /root/Yunzai-Bot && exec bash -i' /usr/bin/yz
+           echo 'cd /root/Yunzai-Bot && exec bash -i' >> /usr/bin/yz
            chmod 777 /usr/bin/yz
            #启动
            echo echo 正在启动Yunzai-Bot > /usr/bin/y
@@ -201,7 +201,7 @@ fi
            sed -i -e '1a redis-server --daemonize yes && cd ~/Yunzai-Bot && pnpm run start' /usr/bin/r
            chmod 777 /usr/bin/r
            #日志
-           echo 'cd /root/Yunzai-Bot && clear && echo -e "\e[1;32m当前日志 如果没有则是没启动云崽\e[0m" && pnpm log' /usr/bin/l
+           echo 'cd /root/Yunzai-Bot && clear && echo -e "\e[1;32m当前日志 如果没有则是没启动云崽\e[0m" && pnpm log' >> /usr/bin/l
            chmod 777 /usr/bin/l
            #登录
            echo echo 启动Yunzai-Bot账号配置 > /usr/bin/g
