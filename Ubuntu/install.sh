@@ -14,29 +14,29 @@ exit 0
 fi
 if ! [ -x "$(command -v curl)" ];then
     echo -e "\033[36m- 检测到未安装curl 开始安装 \033[0m";
-  sudo apt update
-  sudo apt install curl -y
+   apt update
+   apt install curl -y
 fi
 if ! [ -x "$(command -v wget)" ];then
     echo -e "\033[36m- 检测到未安装wget 开始安装 \033[0m";
-   sudo apt update
-   sudo apt install wget -y
+    apt update
+    apt install wget -y
 fi
 if ! [ -x "$(command -v git)" ];then
     echo -e "\033[36m- 检测到未安装git 开始安装 \033[0m";
-   sudo apt update
-   sudo apt install git -y
+    apt update
+    apt install git -y
 fi
 if ! [ -x "$(command -v whiptail)" ]
     then
     echo -e "\033[36m- 检测到未安装whiptail 开始安装 \033[0m";
-   sudo apt update
-   sudo apt install whiptail -y
+    apt update
+    apt install whiptail -y
 fi
 
 #为ubuntu设置中文
 if [ -f /etc/lsb-release ]; then
-  sudo  apt-get install language-pack-zh-han* -y
+    apt-get install language-pack-zh-han* -y
     echo "LANG=\"zh_CN.UTF-8\"
     export LANG">>/etc/profile
     source /etc/profile
@@ -59,10 +59,10 @@ if ! [ -e "/usr/local/bin/d" ];then
   exit
   fi
   chmod +x /usr/local/bin/d
- sudo rm wget.log
+  rm wget.log
   d
 else
- sudo rm -rf /usr/local/bin/d
+  rm -rf /usr/local/bin/d
   wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/Index.sh >> wget.log 2>&1 &
   {
      for ((i = 0 ; i <= 100 ; i+=1)); do
@@ -77,6 +77,6 @@ else
   exit
   fi
   chmod +x /usr/local/bin/d
- sudo rm wget.log
+  rm wget.log
   d
 fi
