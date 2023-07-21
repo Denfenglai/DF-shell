@@ -43,7 +43,7 @@ if [ -f /etc/lsb-release ]; then
     fi
 #安装
 if ! [ -e "/usr/local/bin/d" ];then
- sudo rm -rf /usr/local/bin/d
+ rm -rf /usr/local/bin/d
   wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
   {
      for ((i = 0 ; i <= 100 ; i+=1)); do

@@ -170,14 +170,14 @@ if [ -d "$Yz" ];then
            --menu "请选择登录设备" \
            17 35 7 \
            "1" "安卓手机" \
-           "2" "aPad" \
+           "2" "aPad[推荐]" \
            "3" "安卓手表" \
            "4" "MacOS" \
-           "5" "iPad[推荐]" \
+           "5" "iPad" \
            3>&1 1>&2 2>&3 )
            new="platform: ${equipment}"
            file="$Yz/config/config/qq.yaml"
-           old_equipment="platform: [0-5]"
+           old_equipment="platform: [0-6]"
            new_equipment="platform: ${equipment}"
            sed -i "s/$old_equipment/$new_equipment/g" $file
            rm $HOME/Yunzai-Bot/data/device.json
