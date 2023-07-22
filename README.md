@@ -56,7 +56,7 @@
 
 ### 在终端执行
 ```bash
-bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
+bash <(curl -sL github.com/Denfenglai/DF-shell/raw/master/Termux/DF.sh)
 ```
 - 适配的系统: ubuntu centos
 - [常见问题](https://dengfenglai.cloud/QA/)
@@ -69,12 +69,12 @@ bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master//Termux/DF.sh)
 
 ```bash
 #puppeteer chromium修复
-bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
+bash <(curl -sL github.com/Denfenglai/DF-shell/raw/master/shell/Chromium.sh)
 ```
 
 ```bash
 #登录错误码修复
-bash <(curl -sL gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+bash <(curl -sL github.com/Denfenglai/DF-shell/raw/master/shell/EC.sh)
 ```
 ---
 
