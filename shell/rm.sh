@@ -1,6 +1,16 @@
 #!/bin/bash
 
-YUNZAI_PATH="$HOME/Yunzai-Bot"
+#初始化加载
+if [ -f "$HOME/.Yunzai" ]; then
+  echo -e "\033[32m校验成功\033[0m"
+else
+  echo -e "\033[33m初始化文件中\033[0m"
+  sleep 0.3
+  echo "/root/Yunzai-Bot" > "$HOME/.Yunzai"
+fi
+#定义云崽路径
+YUNZAI_PATH=$(head -n 1 "${HOME}/.Yunzai")
+
 EXCLUDED_DIRS=("example" "genshin" "system" "other" "bin")
 
 # 检查插件目录是否存在
@@ -9,19 +19,6 @@ EXCLUDED_DIRS=("example" "genshin" "system" "other" "bin")
     exit 1
     fi
 
-# 初始化加载
-if [ ! -f "$HOME/.Yunzai" ]; then 
-    printf "文件不存在，正在初始化...\n"
-    echo "$YUNZAI_PATH" > "$HOME/.Yunzai"
-else
-    printf "脚本校验成功\n"
-    echo -e "\e[35m作者:等风来\e[0m"
-fi
-
-# 清屏
-clear
-
-YUNZAI_PATH=$(cat "$HOME/.Yunzai")
 
 # 获取所有插件目录
     plugin_dirs=()
