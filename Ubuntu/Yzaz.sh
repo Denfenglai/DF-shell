@@ -136,7 +136,7 @@ else
  clear
 fi
 #ffmpeg
-     if [ ! -e /usr/local/bin/ ]; then
+     if [ ! -e /usr/local/bin/ffmpeg ]; then
        bash <(curl -sL gitee.com/haanxuan/ffmpeg/raw/master/FFmpeg.sh)
        fi
         
