@@ -9,7 +9,7 @@ if [ -n "$ANDROID_ROOT" ] && [ -x "$PREFIX/bin/apt" ]; then
   echo -e "\e[33m作者：\e[0m等风来\e[0m"
   echo -e "\e[35m项目主页：\e[0mhttps://dengfenglai.cloud/"
   sleep 3
-  bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Termux.sh)
+  bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/Termux/Termux.sh)
 
 # 检测是否在 Ubuntu 上运行
 elif [ -f /etc/os-release ] && grep -q "^NAME=\"Ubuntu\"" /etc/os-release; then
@@ -20,7 +20,7 @@ elif [ -f /etc/os-release ] && grep -q "^NAME=\"Ubuntu\"" /etc/os-release; then
   echo -e "\e[33m作者：\e[0m等风来\e[0m"
   echo -e "\e[35m项目主页：\e[0mhttps://dengfenglai.cloud/"
   sleep 3
-  bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/install.sh)
+  bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/Ubuntu/install.sh)
 
 # 检测是否在 CentOS 上运行
 elif [ -f /etc/centos-release ]; then
@@ -31,7 +31,7 @@ elif [ -f /etc/centos-release ]; then
   echo -e "\e[33m作者：\e[0m等风来\e[0m"
   echo -e "\e[35m项目主页：\e[0mhttps://dengfenglai.cloud/"
   sleep 3
-  bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/install.sh)
+  bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/CentOS/install.sh)
 
 # 不支持的系统
 else

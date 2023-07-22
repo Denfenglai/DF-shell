@@ -44,7 +44,7 @@ if [ -f /etc/lsb-release ]; then
 #安装
 if ! [ -e "/usr/local/bin/d" ];then
  rm -rf /usr/local/bin/d
-  wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Index.sh >> wget.log 2>&1 &
+  wget -O /usr/local/bin/d https://github.com/Denfenglai/DF-shell/raw/master/shell/Index.sh >> wget.log 2>&1 &
   {
      for ((i = 0 ; i <= 100 ; i+=1)); do
         sleep 0.01s
@@ -63,7 +63,7 @@ if ! [ -e "/usr/local/bin/d" ];then
   d
 else
   rm -rf /usr/local/bin/d
-  wget -O /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/Index.sh >> wget.log 2>&1 &
+  wget -O /usr/local/bin/d https://github.com/Denfenglai/DF-shell/raw/master/Index.sh >> wget.log 2>&1 &
   {
      for ((i = 0 ; i <= 100 ; i+=1)); do
         sleep 0.01s

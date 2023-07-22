@@ -4,10 +4,10 @@ ver=0.3.6.5
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
-version=$(curl -s https://gitee.com/Wind-is-so-strong/yz/raw/master/Deng)
+version=$(curl -s https://github.com/Denfenglai/DF-shell/raw/master/Deng)
 if [ "$version" != "$ver" ]; then
     # 下载最新版本脚本
-    curl -L --show-error --fail --retry 3 --output /usr/local/bin/d https://gitee.com/Wind-is-so-strong/yz/raw/master/Index.sh --progress-bar
+    curl -L --show-error --fail --retry 3 --output /usr/local/bin/d https://github.com/Denfenglai/DF-shell/raw/master/Index.sh --progress-bar
     if [ $? -ne 0 ]; then
         # 下载文件失败
         echo "下载文件失败"
@@ -239,10 +239,10 @@ if [ -d "$Yz" ];then
             else
                 if [ -f "/etc/redhat-release" ]; then
                     # 如果是CentOS系统
-                    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Yzaz.sh)
+                    bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/CentOS/Yzaz.sh)
                 elif [ -f "/etc/lsb-release" ]; then
                     # 如果是Ubuntu系统
-                    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Yzaz.sh)
+                    bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/Ubuntu/Yzaz.sh)
                 else
                     echo "不支持当前系统"
                     exit
@@ -253,10 +253,10 @@ if [ -d "$Yz" ];then
             # 获取系统发行版本的信息
             if [ -f "/etc/redhat-release" ]; then
                 # 如果是CentOS系统
-                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/CentOS/Mzaz.sh)
+                bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/CentOS/Mzaz.sh)
             elif [ -f "/etc/lsb-release" ]; then
                 # 如果是Ubuntu系统
-                bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Ubuntu/Mzaz.sh)
+                bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/Ubuntu/Mzaz.sh)
             else
                 echo "不支持当前系统"
                 exit
@@ -290,20 +290,20 @@ fi
      #调用插件安装脚本
     if [[ ${cha} = 1 ]]
     then
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/plugins-shell.sh)
+        bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/cvs-xdm/plugins-shell.sh)
     break
     fi
 
     #调用卸载脚本
     if [[ ${cha} = 2 ]];then
         cd $Yz
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/rm.sh)
+        bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/shell/rm.sh)
     break
     fi
     
     if [[ ${cha} = 3 ]];then
     cd $Yz
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Uex.sh)
+        bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/shell/Uex.sh)
     fi
 fi
 
@@ -334,13 +334,13 @@ $Yz" \
         clear
         cd $Yz
         echo -e "\e[1;32m正在打开Chromium修复菜单\e[0m"
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Chromium.sh)
+        bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/shell/Chromium.sh)
         fi
         
         if [[ ${bc} = 3 ]];then
         clear
         cd $Yz
-        bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/EC.sh)
+        bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/shell/EC.sh)
         fi
         
         if [[ ${bc} = 4 ]];then
@@ -415,17 +415,17 @@ clear
     
     if [[ ${qt} = 3 ]];then
     clear
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/XDMGraph.sh)
+    bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/cvs-xdm/XDMGraph.sh)
     fi
     
     if [[ ${qt} = 4 ]];then
     clear
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/cvs-xdm/SeseGraph.sh)
+    bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/cvs-xdm/SeseGraph.sh)
     fi
     
     if [[ ${qt} = 5 ]];then
     clear
-    bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/shell/Alias.sh)
+    bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/shell/Alias.sh)
     fi
     fi
     
@@ -445,7 +445,7 @@ https://dengfenglai.cloud
 
 #自定义路径
 if [[ ${sese} -eq 7 ]]; then
-bash <(curl -sL https://gitee.com/Wind-is-so-strong/yz/raw/master/Yz.sh)
+bash <(curl -sL https://github.com/Denfenglai/DF-shell/raw/master/Yz.sh)
 break
 fi
 

@@ -82,7 +82,7 @@ echo "alias u='cd ~/Termux-Linux/Ubuntu && ./start-ubuntu.sh'" >> ~/.bashrc
 cd termux-install-linux
 yes 1 |python termux-linux-install.py
 echo "bash Tip.sh" >> /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/.bashrc
-curl -o /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/Tip.sh https://gitee.com/Wind-is-so-strong/yz/raw/master/Termux/Tip.sh
+curl -o /data/data/com.termux/files/home/Termux-Linux/Ubuntu/ubuntu-fs/root/Tip.sh https://github.com/Denfenglai/DF-shell/raw/master/Termux/Tip.sh
 cd ~/Termux-Linux/Ubuntu
 ./start-ubuntu.sh
 echo -e "\e[1;31m安装Ubuntu 18.04失败\e[0m"
