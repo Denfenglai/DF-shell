@@ -56,7 +56,7 @@
 
 ### 在终端执行
 ```bash
-bash <(curl -sL github.com/Denfenglai/DF-shell/raw/master/Termux/DF.sh)
+bash <(curl -sL github.com/Denfenglai/DF-shell/raw/master/DF.sh)
 ```
 - 适配的系统: ubuntu centos
 - [常见问题](https://dengfenglai.cloud/QA/)
