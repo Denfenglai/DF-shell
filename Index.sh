@@ -4,7 +4,7 @@ ver=0.3.7
 
 echo "校验版本中"
 # 检查脚本版本是否最新，如果不是则下载最新版本
-version=$(curl -s https://github.com/Denfenglai/DF-shell/raw/master/Deng)
+version=$(curl -L -s "https://github.com/Denfenglai/DF-shell/raw/master/Deng")
 if [ "$version" != "$ver" ]; then
     # 下载最新版本脚本
     curl -L --show-error --fail --retry 3 --output /usr/local/bin/d https://github.com/Denfenglai/DF-shell/raw/master/Index.sh --progress-bar
